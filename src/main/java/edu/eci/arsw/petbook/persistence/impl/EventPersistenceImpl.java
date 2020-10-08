@@ -1,0 +1,117 @@
+package edu.eci.arsw.petbook.persistence.impl;
+
+import edu.eci.arsw.petbook.model.Event;
+import edu.eci.arsw.petbook.model.Goal;
+import edu.eci.arsw.petbook.model.User;
+import edu.eci.arsw.petbook.persistence.IEventPersistence;
+import edu.eci.arsw.petbook.persistence.PetbookPersistenceException;
+import edu.eci.arsw.petbook.persistence.repo.IEventRepo;
+import edu.eci.arsw.petbook.persistence.repo.IGoalRepo;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Repository;
+import javax.persistence.EntityManager;
+import javax.persistence.PersistenceContext;
+import javax.persistence.Query;
+import java.sql.Date;
+import java.util.List;
+
+@Repository
+public class EventPersistenceImpl implements IEventPersistence {
+
+    @Autowired
+    IEventRepo er;
+
+    @Autowired
+    IGoalRepo gr;
+
+    @PersistenceContext
+    EntityManager entityManager;
+
+    public EventPersistenceImpl(){}
+
+    @Override
+    public void addEvent(Event event) throws PetbookPersistenceException {
+        try {
+            er.save(event);
+        }catch(Exception e){
+            throw new PetbookPersistenceException("Failed to create event");
+        }
+    }
+
+    @Override
+    public List<Event> getAllEvents() throws PetbookPersistenceException {
+        if(er.count() == 0){
+            throw new PetbookPersistenceException("Events not found");
+        }
+        return er.findAll();
+    }
+
+    @Override
+    public void addGoal(Goal goal) throws PetbookPersistenceException {
+        try {
+            gr.save(goal);
+        }catch(Exception e) {
+            throw new PetbookPersistenceException("Failed to create goal");
+        }
+    }
+
+    @Override
+    public List<Goal> getAllGoals() throws PetbookPersistenceException {
+        if(gr.count() == 0){
+            throw new PetbookPersistenceException("Goals not found");
+        }
+        return gr.findAll();
+    }
+
+    @Override
+    public Event getEventXId(int id) throws PetbookPersistenceException{
+        Query query = entityManager.createNativeQuery("select * from companyevent where id=?",Event.class);
+        query.setParameter(1, id);
+        if (query.getResultList().size() == 0) {
+            throw new PetbookPersistenceException("Event not found");
+        }
+        return (Event) query.getSingleResult();
+    }
+
+    @Override
+    public List<Event> getEventsXHost(int hostcompany) throws PetbookPersistenceException{
+        Query query = entityManager.createNativeQuery("select * from companyevent where hostcompany=?",Event.class);
+        query.setParameter(1, hostcompany);
+        if (query.getResultList().size() == 0) {
+            throw new PetbookPersistenceException("Events not found");
+        }
+        return query.getResultList();
+    }
+
+    @Override
+    public Event getEventXDate(Date eventdate) throws PetbookPersistenceException {
+        Query query = entityManager.createNativeQuery("select * from companyevent where eventdate=?",Event.class);
+        query.setParameter(1, eventdate);
+        if (query.getResultList().size() == 0) {
+            throw new PetbookPersistenceException("Event not found");
+        }
+        return (Event) query.getSingleResult();
+    }
+
+    @Override
+    public List<Event> getEventsTypeDonaton(boolean isDonaton)throws PetbookPersistenceException{
+        Query query = entityManager.createNativeQuery("select * from companyevent where isDonaton=?",Event.class);
+        query.setParameter(1, isDonaton);
+        if (query.getResultList().size() == 0) {
+            throw new PetbookPersistenceException("Events not found");
+        }
+        return query.getResultList();
+    }
+
+    /**@Override
+    public User getUserByNameUser(String userName) throws PetbookPersistenceException {
+        Query query = entityManager.createNativeQuery("select * from petbookuser where username=?",User.class);
+        query.setParameter(1, userName);
+        if (query.getResultList().size() == 0) {
+            throw new PetbookPersistenceException("User not found");
+        }
+        return (User) query.getSingleResult();
+    }**/
+
+
+}

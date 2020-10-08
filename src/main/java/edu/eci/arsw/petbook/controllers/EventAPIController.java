@@ -67,7 +67,7 @@ public class EventAPIController {
         }
     }
 
-    @RequestMapping(path = "host/events/{hostcompany}", method = RequestMethod.GET)
+    @RequestMapping(path = "/host/events/{hostcompany}", method = RequestMethod.GET)
     public ResponseEntity<?> getEventsXHost(@PathVariable(name = "hostcompany") int hostcompany) {
         try {
             return new ResponseEntity<>(es.getEventsXHost(hostcompany), HttpStatus.ACCEPTED);
@@ -76,7 +76,7 @@ public class EventAPIController {
         }
     }
 
-    @RequestMapping(path = "date/events/{eventdate}", method = RequestMethod.GET)
+    @RequestMapping(path = "/date/events/{eventdate}", method = RequestMethod.GET)
     public ResponseEntity<?> getEventXDate(@PathVariable(name = "eventdate") Date eventdate) {
         try {
             return new ResponseEntity<>(es.getEventXDate(eventdate), HttpStatus.ACCEPTED);
@@ -85,7 +85,7 @@ public class EventAPIController {
         }
     }
 
-    @RequestMapping(path = "donaton/events/{isDonaton}", method = RequestMethod.GET)
+    @RequestMapping(path = "/donaton/events/{isDonaton}", method = RequestMethod.GET)
     public ResponseEntity<?> getEventsXHost(@PathVariable(name = "isDonaton") boolean isDonaton) {
         try {
             return new ResponseEntity<>(es.getEventsTypeDonaton(isDonaton), HttpStatus.ACCEPTED);

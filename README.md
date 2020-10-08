@@ -1,7 +1,7 @@
 # _Petbook_ 🐶🐱 
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/angipaola10/Petbook-ARSW/master/img/logoo.png"/>
+  <img src="https://raw.githubusercontent.com/Petbook-ARSW/Petbook-Back-End/master/img/logoo.png"/>
 </p>
 
 ### Integrantes
@@ -16,7 +16,7 @@
    
 ### Resumen 
 
-  Peetbook es una aplicación web, un tipo de red social dirigida a veterinarias, centros de refugio y personas que tienen mascotas o muestran afecto por ella (específicamente perros y gatos). El objetivo de esta aplicación facilitar la comunicación entre  personas y/o empresas que se relacionan con estos animales, haciendo más dinámica la forma en que comparten contenido entre ellas y proporcionando a los usuarios información de interés de manera oportuna. 
+Peetbook es una aplicación web, un tipo de red social dirigida a veterinarias, centros de refugio y personas que tienen mascotas o muestran afecto por ella (específicamente perros y gatos). El objetivo de esta aplicación facilitar la comunicación entre  personas y/o empresas que se relacionan con estos animales, haciendo más dinámica la forma en que comparten contenido entre ellas y proporcionando a los usuarios información de interés de manera oportuna. 
 
 ### Descripción
 
@@ -40,15 +40,15 @@
 
 ### Despliegue en heroku
 
-[![Deployed to Heroku](https://www.herokucdn.com/deploy/button.png)](https://petbook-arsw.herokuapp.com/)
+[![Deployed to Heroku](https://www.herokucdn.com/deploy/button.png)](https://petbook-api.herokuapp.com/)
 
 ### Sistema de integración continua
 
-[![CircleCI](https://circleci.com/gh/PDSW-ECI/base-proyectos.svg?style=svg)](https://app.circleci.com/pipelines/github/angipaola10/Petbook-ARSW)
+[![CircleCI](https://circleci.com/gh/Petbook-ARSW/Petbook-Back-End.svg?style=svg)](https://app.circleci.com/pipelines/github/Petbook-ARSW/Petbook-Back-End)
 
 ### Calidad de codigo
 
-[![Codacy Badge](https://api.codacy.com/project/badge/Grade/c42353620eed40daaf4102f82214411e)](https://app.codacy.com/manual/angipaola10/Petbook-ARSW/dashboard)
+[![Codacy Badge](https://app.codacy.com/project/badge/Grade/0a38c0cb9c804bd1a967ce127ac919f3)](https://www.codacy.com/gh/Petbook-ARSW/Petbook-Back-End/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=Petbook-ARSW/Petbook-Back-End&amp;utm_campaign=Badge_Grade)
 
 
 # _Arquitectura y diseño detallado de la aplicación_ 🐾 🦴
@@ -59,29 +59,29 @@
      
 ### Diagrama de casos de uso
   
-   [Enlace a diagrama de casos de uso](https://github.com/angipaola10/Petbook-ARSW/blob/master/img/PetbookUseCase.png)
+   [Enlace a diagrama de casos de uso](https://github.com/Petbook-ARSW/Petbook-Back-End/blob/master/img/PetbookUseCase.png)
    
-   ![alt text](https://raw.githubusercontent.com/angipaola10/Petbook-ARSW/master/img/PetbookUseCase.png)
+   ![alt text](https://raw.githubusercontent.com/Petbook-ARSW/Petbook-Back-End/master/img/PetbookUseCase.png)
 
 ### Diagrama entidad relación de la base de datos
    
-   [Enlace a diagrama entidad relación de la base de datos](https://github.com/angipaola10/Petbook-ARSW/blob/master/img/PetbookER.png)
+   [Enlace a diagrama entidad relación de la base de datos](https://github.com/Petbook-ARSW/Petbook-Back-End/blob/master/img/PetbookER.png)
    
-   ![alt text](https://raw.githubusercontent.com/angipaola10/Petbook-ARSW/master/img/PetbookER.png)
+   ![alt text](https://raw.githubusercontent.com/Petbook-ARSW/Petbook-Back-End/master/img/PetbookER.png)
 
 ### Diagrama de clases
    
-   [Enlace a diagrama de clases](https://github.com/angipaola10/Petbook-ARSW/blob/master/img/PeetbookClass.png)
+   [Enlace a diagrama de clases](https://github.com/Petbook-ARSW/Petbook-Back-End/blob/master/img/PeetbookClass.png)
    
-   ![alt text](https://raw.githubusercontent.com/angipaola10/Petbook-ARSW/master/img/PeetbookClass.png)
+   ![alt text](https://raw.githubusercontent.com/Petbook-ARSW/Petbook-Back-End/master/img/PeetbookClass.png)
 
 ### Diagrama de componentes
 
-   [Enlace a diagrama de componentes](https://github.com/angipaola10/Petbook-ARSW/blob/master/img/PetbookC%26C.png)
+   [Enlace a diagrama de componentes](https://github.com/Petbook-ARSW/Petbook-Back-End/blob/master/img/PetbookC%26C.png)
    
-   ![PetbookC C](https://user-images.githubusercontent.com/54051399/92410183-f1623900-f108-11ea-9e95-7e977df43cd0.png)
+   ![alt text](https://raw.githubusercontent.com/Petbook-ARSW/Petbook-Back-End/master/img/PetbookC&C.png)
    
 ### Mockups
 
-   ![Enlace a Mockups](https://github.com/angipaola10/Petbook-ARSW/blob/master/mockups.pdf)
+   ![Enlace a Mockups](https://github.com/Petbook-ARSW/Petbook-Back-End/blob/master/mockups.pdf)
   

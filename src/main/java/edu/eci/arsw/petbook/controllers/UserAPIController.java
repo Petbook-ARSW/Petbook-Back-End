@@ -9,12 +9,13 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.http.ResponseEntity;
 
 @RestController
-@RequestMapping("/home")
 @CrossOrigin(origins = "*")
 public class UserAPIController {
 
     @Autowired
     IUserServices us;
+
+
 
     @RequestMapping(method = RequestMethod.GET)
     public ResponseEntity<?> getResorces(){
@@ -25,6 +26,16 @@ public class UserAPIController {
     public ResponseEntity<?> postUsuario(@RequestBody User user){
         try {
             us.addUser(user);
+            return new ResponseEntity<>(HttpStatus.CREATED);
+        } catch (PetbookServicesException ex) {
+            return new ResponseEntity<>(null, null);
+        }
+    }
+
+    @RequestMapping(path = "/users/participInEnvent/{idevent}/{iduser}", method = RequestMethod.POST)
+    public ResponseEntity<?> postParticpation(@PathVariable(name = "idevent") int idevent,@PathVariable(name = "iduser") int iduser){
+        try {
+            us.asistirEvento(idevent,iduser);
             return new ResponseEntity<>(HttpStatus.CREATED);
         } catch (PetbookServicesException ex) {
             return new ResponseEntity<>(null, null);
@@ -59,5 +70,13 @@ public class UserAPIController {
         }
     }
 
-
+    @RequestMapping(path = "/users/changeUser", method = RequestMethod.POST)
+    public ResponseEntity<?> changeUsuario(@RequestBody User user){
+        try {
+            us.ediitUser(user);
+            return new ResponseEntity<>(HttpStatus.CREATED);
+        } catch (PetbookServicesException ex) {
+            return new ResponseEntity<>(null, null);
+        }
+    }
 }

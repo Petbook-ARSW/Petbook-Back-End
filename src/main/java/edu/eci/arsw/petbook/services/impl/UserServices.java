@@ -30,6 +30,17 @@ public class UserServices implements IUserServices {
         }
     }
 
+
+    @Override
+    public void asistirEvento(int idevent,int iduser) throws PetbookServicesException {
+        try {
+            up.asistirEvento(idevent,iduser);
+        } catch (PetbookPersistenceException e) {
+            throw new PetbookServicesException(e.getMessage());
+
+        }
+    }
+
     @Override
     public void setUser(User user) throws PetbookServicesException {
         try{
@@ -56,5 +67,15 @@ public class UserServices implements IUserServices {
             throw new PetbookServicesException(e.getMessage());
         }
     }
+
+    @Override
+    public void ediitUser(User user) throws PetbookServicesException {
+        try{
+            up.changeUser(user);
+        }catch(PetbookPersistenceException e){
+            throw new PetbookServicesException(e.getMessage());
+        }
+    }
+
 
 }

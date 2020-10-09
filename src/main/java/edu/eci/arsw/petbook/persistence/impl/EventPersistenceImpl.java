@@ -103,15 +103,43 @@ public class EventPersistenceImpl implements IEventPersistence {
         return query.getResultList();
     }
 
-    /**@Override
-    public User getUserByNameUser(String userName) throws PetbookPersistenceException {
-        Query query = entityManager.createNativeQuery("select * from petbookuser where username=?",User.class);
-        query.setParameter(1, userName);
-        if (query.getResultList().size() == 0) {
-            throw new PetbookPersistenceException("User not found");
+    @Override
+    public void removeEventXId(int id) throws PetbookPersistenceException {
+        try {
+            er.delete(id);
+        }catch(Exception e){
+            throw new PetbookPersistenceException("Failed to remove event");
         }
-        return (User) query.getSingleResult();
-    }**/
+
+    }
+
+    @Override
+    public void updateEvent(Event evento) throws PetbookPersistenceException {
+        try{
+            Event temp = er.findOne(evento.getId());
+            if (!evento.getDate().equals("")){
+                temp.setDate(evento.getDate());
+            }
+            if (!evento.getAddress().equals("")){
+                temp.setAddress(evento.getAddress());
+            }
+            if (!evento.getHour().equals("")){
+                temp.setHour(evento.getHour());
+            }
+            if (!evento.getInformation().equals("")){
+                temp.setInformation(evento.getInformation());
+            }
+            saveEvent(temp);
+        }catch(Exception e){
+            throw new PetbookPersistenceException("Failed to update event");
+        }
+
+    }
+
+    @Override
+    public void saveEvent(Event evento) throws PetbookPersistenceException {
+        er.save(evento);
+    }
 
 
 }

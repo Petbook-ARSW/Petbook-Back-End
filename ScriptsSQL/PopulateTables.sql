@@ -6,4 +6,5 @@ insert into companyevent (eventname, isDonaton, address, eventdate, eventhour, i
 insert into companyevent (eventname, isDonaton, address, eventdate, eventhour, information, hostcompany) values ('Jornada de vacunación', true, 'cll 55a No343c - 5', '2020-12-16', '13:00', 'sin info', 4);
 insert into goal (eventid, prize, state) values (2, 'Kit de aseo para gatos', false);
 insert into goal (eventid, prize, state) values (2, 'Kit de aseo para perros', false);
+insert into participants(iduser,idevent) values (3,2);
 

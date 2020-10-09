@@ -92,5 +92,23 @@ public class EventServices implements IEventServices {
         }
     }
 
+    @Override
+    public void removeEventXId(int id) throws PetbookServicesException {
+        try {
+            ep.removeEventXId(id);
+        } catch (PetbookPersistenceException e) {
+            throw new PetbookServicesException(e.getMessage());
+        }
+    }
+
+    @Override
+    public void updateEvent(Event evento) throws PetbookServicesException {
+        try {
+            ep.updateEvent(evento);
+        } catch (PetbookPersistenceException e) {
+            throw new PetbookServicesException(e.getMessage());
+        }
+    }
+
 
 }

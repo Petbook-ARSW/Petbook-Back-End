@@ -14,5 +14,10 @@ public interface IUserPersistence {
 
     User getUserByNameUser(String nameUser)throws PetbookPersistenceException;
 
+    void changeUser(User user)throws PetbookPersistenceException;
+
+    void saveUsuario(User usuario)throws PetbookPersistenceException;
+
+    void asistirEvento(int idevent,int iduser)throws PetbookPersistenceException;
 }
 

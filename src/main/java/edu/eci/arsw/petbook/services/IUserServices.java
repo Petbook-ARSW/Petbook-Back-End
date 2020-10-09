@@ -13,4 +13,8 @@ public interface IUserServices {
 
     User getUserByNameUser(String nameUser) throws PetbookServicesException;
 
+    void ediitUser(User user) throws PetbookServicesException;
+
+    void asistirEvento(int idevent,int iduser)throws PetbookServicesException;
+
 }

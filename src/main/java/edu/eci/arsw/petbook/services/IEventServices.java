@@ -2,7 +2,6 @@ package edu.eci.arsw.petbook.services;
 
 import edu.eci.arsw.petbook.model.Event;
 import edu.eci.arsw.petbook.model.Goal;
-import edu.eci.arsw.petbook.persistence.PetbookPersistenceException;
 
 import java.sql.Date;
 import java.util.List;
@@ -24,4 +23,8 @@ public interface IEventServices {
     Event getEventXDate(Date eventdate)throws PetbookServicesException;
 
     List<Event> getEventsTypeDonaton(boolean isDonaton)throws PetbookServicesException;
+
+    void removeEventXId(int id) throws PetbookServicesException;
+
+    void updateEvent(Event evento) throws PetbookServicesException;
 }

@@ -13,7 +13,6 @@ import org.springframework.web.bind.annotation.*;
 import java.sql.Date;
 
 @RestController
-@RequestMapping("/home")
 @CrossOrigin(origins = "*")
 public class EventAPIController {
 
@@ -31,7 +30,7 @@ public class EventAPIController {
     }
 
     @RequestMapping(path = "/events/{eventId}/newGoal", method = RequestMethod.POST)
-    public ResponseEntity<?> postEvent(@PathVariable(name = "eventId") int eventId, @RequestBody Goal goal){
+    public ResponseEntity<?> postGoal(@PathVariable(name = "eventId") int eventId, @RequestBody Goal goal){
         try {
             es.addGoal(goal);
             return new ResponseEntity<>(HttpStatus.CREATED);
@@ -67,7 +66,7 @@ public class EventAPIController {
         }
     }
 
-    @RequestMapping(path = "/host/events/{hostcompany}", method = RequestMethod.GET)
+    @RequestMapping(path = "host/events/{hostcompany}", method = RequestMethod.GET)
     public ResponseEntity<?> getEventsXHost(@PathVariable(name = "hostcompany") int hostcompany) {
         try {
             return new ResponseEntity<>(es.getEventsXHost(hostcompany), HttpStatus.ACCEPTED);
@@ -76,7 +75,7 @@ public class EventAPIController {
         }
     }
 
-    @RequestMapping(path = "/date/events/{eventdate}", method = RequestMethod.GET)
+    @RequestMapping(path = "date/events/{eventdate}", method = RequestMethod.GET)
     public ResponseEntity<?> getEventXDate(@PathVariable(name = "eventdate") Date eventdate) {
         try {
             return new ResponseEntity<>(es.getEventXDate(eventdate), HttpStatus.ACCEPTED);
@@ -85,10 +84,30 @@ public class EventAPIController {
         }
     }
 
-    @RequestMapping(path = "/donaton/events/{isDonaton}", method = RequestMethod.GET)
+    @RequestMapping(path = "donaton/events/{isDonaton}", method = RequestMethod.GET)
     public ResponseEntity<?> getEventsXHost(@PathVariable(name = "isDonaton") boolean isDonaton) {
         try {
             return new ResponseEntity<>(es.getEventsTypeDonaton(isDonaton), HttpStatus.ACCEPTED);
+        } catch (PetbookServicesException ex) {
+            return new ResponseEntity<>(null, HttpStatus.NOT_FOUND);
+        }
+    }
+
+    @RequestMapping(path = "deleteEvent/events/{id}", method = RequestMethod.DELETE)
+    public ResponseEntity<?> removeEvent(@PathVariable(name = "id") int id) {
+        try {
+            es.removeEventXId(id);
+            return new ResponseEntity<>(HttpStatus.ACCEPTED);
+        } catch (PetbookServicesException ex) {
+            return new ResponseEntity<>(null, HttpStatus.NOT_FOUND);
+        }
+    }
+
+    @RequestMapping(path = "updateEvent/events/", method = RequestMethod.POST)
+    public ResponseEntity<?> removeEvent(@RequestBody Event event) {
+        try {
+            es.updateEvent(event);
+            return new ResponseEntity<>(HttpStatus.ACCEPTED);
         } catch (PetbookServicesException ex) {
             return new ResponseEntity<>(null, HttpStatus.NOT_FOUND);
         }

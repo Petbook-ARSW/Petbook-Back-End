@@ -1,7 +1,5 @@
 package edu.eci.arsw.petbook.services;
 import edu.eci.arsw.petbook.model.Pet;
-import edu.eci.arsw.petbook.model.User;
-
 
 import java.util.List;
 
@@ -14,5 +12,9 @@ public interface IPetServices {
     List<Pet> getPetsByIdPerson(int personId) throws PetbookServicesException;
 
     void editPet(int petId,Pet pet) throws PetbookServicesException;
+
+    Pet getPetById(int id) throws  PetbookServicesException;
+
+    void removePetId(int id) throws PetbookServicesException;
 }
 

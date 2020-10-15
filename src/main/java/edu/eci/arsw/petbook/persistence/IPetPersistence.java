@@ -1,7 +1,7 @@
 package edu.eci.arsw.petbook.persistence;
-import java.util.List;
 import edu.eci.arsw.petbook.model.Pet;
-import edu.eci.arsw.petbook.model.User;
+
+import java.util.List;
 
 public interface IPetPersistence {
     void addUser(Pet pet) throws PetbookPersistenceException;
@@ -13,4 +13,9 @@ public interface IPetPersistence {
     void editPet(int id, Pet pet)throws PetbookPersistenceException;
 
     void save(Pet pet)throws PetbookPersistenceException;
+
+    Pet getPetById(int id) throws  PetbookPersistenceException;
+
+
+    void removePetId(int id)throws  PetbookPersistenceException;
 }

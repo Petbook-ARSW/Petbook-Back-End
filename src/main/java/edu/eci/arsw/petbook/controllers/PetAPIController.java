@@ -2,15 +2,12 @@ package edu.eci.arsw.petbook.controllers;
 
 
 import edu.eci.arsw.petbook.model.Pet;
-import edu.eci.arsw.petbook.model.User;
 import edu.eci.arsw.petbook.services.IPetServices;
 import edu.eci.arsw.petbook.services.PetbookServicesException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
-import org.springframework.web.bind.annotation.*;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @CrossOrigin(origins = "*")
@@ -53,6 +50,16 @@ public class PetAPIController {
         }
     }
 
+
+    @RequestMapping(path = "/pets/pet/{petId}", method = RequestMethod.GET)
+    public ResponseEntity<?> getPetById(@PathVariable(name = "petId") int petId) {
+        try {
+            return new ResponseEntity<>(pts.getPetById(petId), HttpStatus.ACCEPTED);
+        } catch (PetbookServicesException ex) {
+            return new ResponseEntity<>(null, HttpStatus.NOT_FOUND);
+        }
+    }
+
     @RequestMapping(path = "/pets/changePet/{petId}", method = RequestMethod.POST)
     public ResponseEntity<?> changeUsuario(@PathVariable(name = "petId") int petId,@RequestBody Pet pet){
         try {
@@ -60,6 +67,16 @@ public class PetAPIController {
             return new ResponseEntity<>(HttpStatus.CREATED);
         } catch (PetbookServicesException ex) {
             return new ResponseEntity<>(null, null);
+        }
+    }
+
+    @RequestMapping(path = "/pets/{id}", method = RequestMethod.DELETE)
+    public ResponseEntity<?> removePet(@PathVariable(name = "id") int id) {
+        try {
+            pts.removePetId(id);
+            return new ResponseEntity<>(HttpStatus.ACCEPTED);
+        } catch (PetbookServicesException ex) {
+            return new ResponseEntity<>(null, HttpStatus.NOT_FOUND);
         }
     }
 

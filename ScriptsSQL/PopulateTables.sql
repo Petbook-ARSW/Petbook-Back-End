@@ -7,4 +7,4 @@ insert into companyevent (eventname, isDonaton, address, eventdate, eventhour, i
 insert into companyevent (eventname, isDonaton, address, eventdate, eventhour, information, hostcompany) values ('Jornada de vacunación', true, 'cll 55a No343c - 5', '2020-12-16', '13:00', 'sin info', 4);
 insert into goal (eventid, prize, state, value_money) values (2, 'Kit de aseo para gatos', false, 250000);
 insert into goal (eventid, prize, state, value_money) values (2, 'Kit de aseo para perros', false, 545000);
-
+insert into pet (idowner,petname,birthdate,information) values (1,'thor','2020-10-10','perro con vacunas contra la rabia');

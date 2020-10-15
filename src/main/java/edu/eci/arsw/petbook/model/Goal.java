@@ -20,12 +20,16 @@ public class Goal implements Serializable {
     @Column(name = "state")
     private boolean state;
 
+    @Column(name = "value_money")
+    private int value_money;
+
     public Goal(){}
 
-    public Goal(int donationId,String prize,Boolean state){
+    public Goal(int donationId,String prize,Boolean state,int value_money){
         this.donationId=donationId;
         this.prize=prize;
         this.state=state;
+        this.value_money=value_money;
     }
 
     public int getId() {
@@ -58,5 +62,13 @@ public class Goal implements Serializable {
 
     public void setState(boolean state) {
         this.state = state;
+    }
+
+    public int getValue_money() {
+        return value_money;
+    }
+
+    public void setValue_money(int value_money) {
+        this.value_money = value_money;
     }
 }

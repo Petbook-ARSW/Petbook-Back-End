@@ -5,6 +5,6 @@ insert into petbookuser (username, pasword, usertype, mail, numberPhone, informa
 insert into petbookuser (username, pasword, usertype, mail, numberPhone, information, birthdate) values ('Gatitos', 'e7e275e3bee77c9159a81f0a0ec655fd', 'Veterinary','gatitos@gmail.com', 5667896, 'Sin info', '1965-06-18');
 insert into companyevent (eventname, isDonaton, address, eventdate, eventhour, information, hostcompany) values ('Jornada de adopción', false, 'cll 55a No343c - 5', '2020-12-18', '13:00', 'sin info', 5);
 insert into companyevent (eventname, isDonaton, address, eventdate, eventhour, information, hostcompany) values ('Jornada de vacunación', true, 'cll 55a No343c - 5', '2020-12-16', '13:00', 'sin info', 4);
-insert into goal (eventid, prize, state) values (2, 'Kit de aseo para gatos', false);
-insert into goal (eventid, prize, state) values (2, 'Kit de aseo para perros', false);
+insert into goal (eventid, prize, state, value_money) values (2, 'Kit de aseo para gatos', false, 250000);
+insert into goal (eventid, prize, state, value_money) values (2, 'Kit de aseo para perros', false, 545000);
 

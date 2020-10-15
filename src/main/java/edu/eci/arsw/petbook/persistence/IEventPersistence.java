@@ -14,7 +14,7 @@ public interface IEventPersistence {
 
     void addGoal(Goal goal) throws PetbookPersistenceException;
 
-    List<Goal> getAllGoals() throws PetbookPersistenceException;
+    List<Goal> getAllGoals(int eventid) throws PetbookPersistenceException;
 
     Event getEventXId(int id) throws PetbookPersistenceException;
 
@@ -30,4 +30,6 @@ public interface IEventPersistence {
     void updateEvent(Event evento) throws PetbookPersistenceException;
 
     void saveEvent(Event evento) throws PetbookPersistenceException;
+
+    Goal getGoalsXId(int id) throws PetbookPersistenceException;
 }

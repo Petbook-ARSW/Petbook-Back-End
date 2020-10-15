@@ -49,9 +49,9 @@ public class EventAPIController {
     }
 
     @RequestMapping(path = "/events/{eventId}/goals", method = RequestMethod.GET)
-    public ResponseEntity<?> getAllGoals(@PathVariable(name = "eventId") int eventId){
+    public ResponseEntity<?> getGoalsXEventId(@PathVariable(name = "eventId") int eventId){
         try{
-            return new ResponseEntity<>(es.getAllGoals(),HttpStatus.ACCEPTED);
+            return new ResponseEntity<>(es.getAllGoals(eventId),HttpStatus.ACCEPTED);
         }catch (PetbookServicesException ex){
             return new ResponseEntity<>(null, HttpStatus.NOT_FOUND);
         }
@@ -85,7 +85,7 @@ public class EventAPIController {
     }
 
     @RequestMapping(path = "donaton/events/{isDonaton}", method = RequestMethod.GET)
-    public ResponseEntity<?> getEventsXHost(@PathVariable(name = "isDonaton") boolean isDonaton) {
+    public ResponseEntity<?> getEventsXDonaton(@PathVariable(name = "isDonaton") boolean isDonaton) {
         try {
             return new ResponseEntity<>(es.getEventsTypeDonaton(isDonaton), HttpStatus.ACCEPTED);
         } catch (PetbookServicesException ex) {
@@ -104,11 +104,20 @@ public class EventAPIController {
     }
 
     @RequestMapping(path = "updateEvent/events/", method = RequestMethod.POST)
-    public ResponseEntity<?> removeEvent(@RequestBody Event event) {
+    public ResponseEntity<?> UpdateEvent(@RequestBody Event event) {
         try {
             es.updateEvent(event);
             return new ResponseEntity<>(HttpStatus.ACCEPTED);
         } catch (PetbookServicesException ex) {
+            return new ResponseEntity<>(null, HttpStatus.NOT_FOUND);
+        }
+    }
+
+    @RequestMapping(path = "/events/{eventId}/goals/{id}", method = RequestMethod.GET)
+    public ResponseEntity<?> getGoalsXId(@PathVariable(name = "id") int id){
+        try{
+            return new ResponseEntity<>(es.getGoalsXId(id),HttpStatus.ACCEPTED);
+        }catch (PetbookServicesException ex){
             return new ResponseEntity<>(null, HttpStatus.NOT_FOUND);
         }
     }

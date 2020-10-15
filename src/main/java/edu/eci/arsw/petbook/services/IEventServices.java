@@ -14,7 +14,7 @@ public interface IEventServices {
 
     void addGoal(Goal goal)throws PetbookServicesException;
 
-    List<Goal> getAllGoals()throws PetbookServicesException;
+    List<Goal> getAllGoals(int eventid)throws PetbookServicesException;
 
     Event getEventXId(int id) throws PetbookServicesException;
 
@@ -27,4 +27,6 @@ public interface IEventServices {
     void removeEventXId(int id) throws PetbookServicesException;
 
     void updateEvent(Event evento) throws PetbookServicesException;
+
+    Goal getGoalsXId(int id)throws PetbookServicesException;
 }

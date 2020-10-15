@@ -12,6 +12,6 @@ create table if not exists participants (id serial primary key, iduser int, idev
 alter table participants add constraint fk_iduser foreign key (iduser) references petbookuser(id)ON DELETE cascade;
 alter table participants add constraint fk_idevent foreign key (idevent) references companyevent(id)ON DELETE cascade;
 
-create table if not exists goal (id serial primary key, eventid int, prize varchar(50) not null, state boolean);
+create table if not exists goal (id serial primary key, eventid int, prize varchar(50) not null, state boolean, value_money int);
 alter table goal add constraint fk_eventid foreign key (eventid) references companyevent(id)ON DELETE cascade;
 

@@ -56,12 +56,15 @@ public class EventPersistenceImpl implements IEventPersistence {
     }
 
     @Override
-    public List<Goal> getAllGoals() throws PetbookPersistenceException {
-        if(gr.count() == 0){
+    public List<Goal> getAllGoals(int eventid) throws PetbookPersistenceException {
+        Query query = entityManager.createNativeQuery("select * from goal where eventid=?",Goal.class);
+        query.setParameter(1, eventid);
+        if(query.getResultList().size() == 0){
             throw new PetbookPersistenceException("Goals not found");
         }
-        return gr.findAll();
+        return query.getResultList();
     }
+
 
     @Override
     public Event getEventXId(int id) throws PetbookPersistenceException{
@@ -141,5 +144,14 @@ public class EventPersistenceImpl implements IEventPersistence {
         er.save(evento);
     }
 
+    @Override
+    public Goal getGoalsXId(int id) throws PetbookPersistenceException{
+        Query query = entityManager.createNativeQuery("select * from goal where id=?",Goal.class);
+        query.setParameter(1, id);
+        if (query.getResultList().size() == 0) {
+            throw new PetbookPersistenceException("Goal not found");
+        }
+        return (Goal) query.getSingleResult();
+    }
 
 }

@@ -48,9 +48,9 @@ public class EventServices implements IEventServices {
     }
 
     @Override
-    public List<Goal> getAllGoals() throws PetbookServicesException {
+    public List<Goal> getAllGoals(int eventid) throws PetbookServicesException {
         try {
-            return ep.getAllGoals();
+            return ep.getAllGoals(eventid);
         } catch (PetbookPersistenceException e) {
             throw new PetbookServicesException(e.getMessage());
         }
@@ -110,5 +110,12 @@ public class EventServices implements IEventServices {
         }
     }
 
-
+    @Override
+    public Goal getGoalsXId(int id) throws PetbookServicesException {
+        try {
+            return ep.getGoalsXId(id);
+        } catch (PetbookPersistenceException e) {
+            throw new PetbookServicesException(e.getMessage());
+        }
+    }
 }

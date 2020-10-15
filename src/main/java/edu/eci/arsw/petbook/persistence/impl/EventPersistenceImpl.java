@@ -2,13 +2,15 @@ package edu.eci.arsw.petbook.persistence.impl;
 
 import edu.eci.arsw.petbook.model.Event;
 import edu.eci.arsw.petbook.model.Goal;
-import edu.eci.arsw.petbook.model.User;
+import edu.eci.arsw.petbook.model.Raffle;
 import edu.eci.arsw.petbook.persistence.IEventPersistence;
 import edu.eci.arsw.petbook.persistence.PetbookPersistenceException;
 import edu.eci.arsw.petbook.persistence.repo.IEventRepo;
 import edu.eci.arsw.petbook.persistence.repo.IGoalRepo;
+import edu.eci.arsw.petbook.persistence.repo.IRaffleRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
+
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.persistence.Query;
@@ -23,6 +25,9 @@ public class EventPersistenceImpl implements IEventPersistence {
 
     @Autowired
     IGoalRepo gr;
+
+    @Autowired
+    IRaffleRepo rr;
 
     @PersistenceContext
     EntityManager entityManager;
@@ -152,6 +157,35 @@ public class EventPersistenceImpl implements IEventPersistence {
             throw new PetbookPersistenceException("Goal not found");
         }
         return (Goal) query.getSingleResult();
+    }
+
+    @Override
+    public void addRaffle(Raffle raffle) throws PetbookPersistenceException {
+        try {
+            rr.save(raffle);
+        }catch(Exception e) {
+            throw new PetbookPersistenceException("Failed to create goal");
+        }
+    }
+
+    @Override
+    public List<Raffle> getAllRaffles(int eventid) throws PetbookPersistenceException {
+        Query query = entityManager.createNativeQuery("select * from raffle where eventid=?",Raffle.class);
+        query.setParameter(1, eventid);
+        if(query.getResultList().size() == 0){
+            throw new PetbookPersistenceException("Raffles not found");
+        }
+        return query.getResultList();
+    }
+
+    @Override
+    public Raffle getRafflesXId(int id) throws PetbookPersistenceException {
+        Query query = entityManager.createNativeQuery("select * from raffle where id=?",Raffle.class);
+        query.setParameter(1, id);
+        if (query.getResultList().size() == 0) {
+            throw new PetbookPersistenceException("Raffle not found");
+        }
+        return (Raffle) query.getSingleResult();
     }
 
 }

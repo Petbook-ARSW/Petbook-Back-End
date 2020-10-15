@@ -2,6 +2,7 @@ package edu.eci.arsw.petbook.services;
 
 import edu.eci.arsw.petbook.model.Event;
 import edu.eci.arsw.petbook.model.Goal;
+import edu.eci.arsw.petbook.model.Raffle;
 
 import java.sql.Date;
 import java.util.List;
@@ -29,4 +30,10 @@ public interface IEventServices {
     void updateEvent(Event evento) throws PetbookServicesException;
 
     Goal getGoalsXId(int id)throws PetbookServicesException;
+
+    void addRaffle(Raffle raffle)throws PetbookServicesException;
+
+    List<Raffle> getAllRaffles(int eventid)throws PetbookServicesException;
+
+    Raffle getRafflesXId(int id)throws PetbookServicesException;
 }

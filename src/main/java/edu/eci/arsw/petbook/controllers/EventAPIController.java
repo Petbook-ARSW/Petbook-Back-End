@@ -3,6 +3,7 @@ package edu.eci.arsw.petbook.controllers;
 
 import edu.eci.arsw.petbook.model.Event;
 import edu.eci.arsw.petbook.model.Goal;
+import edu.eci.arsw.petbook.model.Raffle;
 import edu.eci.arsw.petbook.services.IEventServices;
 import edu.eci.arsw.petbook.services.PetbookServicesException;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -117,6 +118,34 @@ public class EventAPIController {
     public ResponseEntity<?> getGoalsXId(@PathVariable(name = "id") int id){
         try{
             return new ResponseEntity<>(es.getGoalsXId(id),HttpStatus.ACCEPTED);
+        }catch (PetbookServicesException ex){
+            return new ResponseEntity<>(null, HttpStatus.NOT_FOUND);
+        }
+    }
+
+    @RequestMapping(path = "/events/{eventId}/{goalId}/newRaffle", method = RequestMethod.POST)
+    public ResponseEntity<?> postRaffle(@PathVariable(name = "eventId") int eventId,@PathVariable(name = "goalId") int goalId, @RequestBody Raffle raffle){
+        try {
+            es.addRaffle(raffle);
+            return new ResponseEntity<>(HttpStatus.CREATED);
+        } catch (PetbookServicesException ex) {
+            return new ResponseEntity<>(null, null);
+        }
+    }
+
+    @RequestMapping(path = "/events/{eventId}/raffles", method = RequestMethod.GET)
+    public ResponseEntity<?> getRafflesXEventId(@PathVariable(name = "eventId") int eventId){
+        try{
+            return new ResponseEntity<>(es.getAllRaffles(eventId),HttpStatus.ACCEPTED);
+        }catch (PetbookServicesException ex){
+            return new ResponseEntity<>(null, HttpStatus.NOT_FOUND);
+        }
+    }
+
+    @RequestMapping(path = "/events/{eventId}/raffles/{id}", method = RequestMethod.GET)
+    public ResponseEntity<?> getRafflesXId(@PathVariable(name = "id") int id){
+        try{
+            return new ResponseEntity<>(es.getRafflesXId(id),HttpStatus.ACCEPTED);
         }catch (PetbookServicesException ex){
             return new ResponseEntity<>(null, HttpStatus.NOT_FOUND);
         }

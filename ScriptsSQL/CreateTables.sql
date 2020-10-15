@@ -12,8 +12,13 @@ create table if not exists participants (id serial primary key, iduser int, idev
 alter table participants add constraint fk_iduser foreign key (iduser) references petbookuser(id)ON DELETE cascade;
 alter table participants add constraint fk_idevent foreign key (idevent) references companyevent(id)ON DELETE cascade;
 
-create table if not exists goal (id serial primary key, eventid int, prize varchar(50) not null, state boolean, value_money int);
+create table if not exists goal (id serial primary key, eventid int, prize varchar(50) not null, state boolean, valor int);
 alter table goal add constraint fk_eventid foreign key (eventid) references companyevent(id)ON DELETE cascade;
+
+create table if not exists raffle (id serial primary key, raffledate date not null, rafflehour time not null, idgoal int not null, ganador int not null,eventid int not null);
+alter table pet add constraint fk_ganador foreign key (ganador) references petbookuser(id)ON DELETE cascade;
+alter table pet add constraint fk_idgoal foreign key (idgoal) references goal(id)ON DELETE cascade;
+alter table goal add constraint fk_eventidraffle foreign key (eventid) references companyevent(id)ON DELETE cascade;
 ----PET-----
 create table if not exists pet (id serial primary key, idowner int not null, petname varchar(30) not null, birthdate date not null,information varchar(500));
 alter table pet add constraint fk_ownerid foreign key (idowner) references petbookuser(id)ON DELETE cascade;

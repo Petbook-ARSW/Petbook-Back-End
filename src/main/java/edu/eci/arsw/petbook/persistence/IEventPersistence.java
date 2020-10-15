@@ -2,6 +2,7 @@ package edu.eci.arsw.petbook.persistence;
 
 import edu.eci.arsw.petbook.model.Event;
 import edu.eci.arsw.petbook.model.Goal;
+import edu.eci.arsw.petbook.model.Raffle;
 
 import java.sql.Date;
 import java.util.List;
@@ -32,4 +33,10 @@ public interface IEventPersistence {
     void saveEvent(Event evento) throws PetbookPersistenceException;
 
     Goal getGoalsXId(int id) throws PetbookPersistenceException;
+
+    void addRaffle(Raffle raffle) throws PetbookPersistenceException;;
+
+    List<Raffle> getAllRaffles(int eventid) throws PetbookPersistenceException;
+
+    Raffle getRafflesXId(int id) throws PetbookPersistenceException;
 }

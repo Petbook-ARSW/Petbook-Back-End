@@ -2,6 +2,7 @@ package edu.eci.arsw.petbook.services.impl;
 
 import edu.eci.arsw.petbook.model.Event;
 import edu.eci.arsw.petbook.model.Goal;
+import edu.eci.arsw.petbook.model.Raffle;
 import edu.eci.arsw.petbook.persistence.IEventPersistence;
 import edu.eci.arsw.petbook.persistence.PetbookPersistenceException;
 import edu.eci.arsw.petbook.services.IEventServices;
@@ -118,4 +119,33 @@ public class EventServices implements IEventServices {
             throw new PetbookServicesException(e.getMessage());
         }
     }
+
+    @Override
+    public void addRaffle(Raffle raffle) throws PetbookServicesException {
+        try {
+            ep.addRaffle(raffle);
+        } catch (PetbookPersistenceException e) {
+            throw new PetbookServicesException(e.getMessage());
+        }
+    }
+
+    @Override
+    public List<Raffle> getAllRaffles(int eventid) throws PetbookServicesException {
+        try {
+            return ep.getAllRaffles(eventid);
+        } catch (PetbookPersistenceException e) {
+            throw new PetbookServicesException(e.getMessage());
+        }
+    }
+
+    @Override
+    public Raffle getRafflesXId(int id) throws PetbookServicesException {
+        try {
+            return ep.getRafflesXId(id);
+        } catch (PetbookPersistenceException e) {
+            throw new PetbookServicesException(e.getMessage());
+        }
+    }
+
+
 }

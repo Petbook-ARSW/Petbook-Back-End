@@ -15,8 +15,6 @@ public class UserAPIController {
     @Autowired
     IUserServices us;
 
-
-
     @RequestMapping(method = RequestMethod.GET)
     public ResponseEntity<?> getResorces(){
         return new ResponseEntity<>(null,HttpStatus.ACCEPTED);

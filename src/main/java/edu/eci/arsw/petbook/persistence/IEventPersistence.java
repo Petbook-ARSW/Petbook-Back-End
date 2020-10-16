@@ -22,10 +22,9 @@ public interface IEventPersistence {
 
     List<Event> getEventsXHost(int hostcompany) throws PetbookPersistenceException;
 
-    Event getEventXDate(Date eventdate) throws PetbookPersistenceException;
+    List<Event> getEventsXDate(Date eventdate) throws PetbookPersistenceException;
 
-    List<Event> getEventsTypeDonaton(boolean isDonaton) throws PetbookPersistenceException;
-
+    List<Event> getEventsTypeDonaton() throws PetbookPersistenceException;
 
     void removeEventXId(int id) throws PetbookPersistenceException;
 

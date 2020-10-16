@@ -77,18 +77,18 @@ public class EventServices implements IEventServices {
     }
 
     @Override
-    public Event getEventXDate(Date eventdate) throws PetbookServicesException {
+    public List<Event> getEventsXDate(Date eventdate) throws PetbookServicesException {
         try{
-            return ep.getEventXDate(eventdate);
+            return ep.getEventsXDate(eventdate);
         }catch (PetbookPersistenceException e){
             throw new PetbookServicesException(e.getMessage());
         }
     }
 
     @Override
-    public List<Event> getEventsTypeDonaton(boolean isDonaton) throws PetbookServicesException {
+    public List<Event> getEventsTypeDonaton() throws PetbookServicesException {
         try{
-            return ep.getEventsTypeDonaton(isDonaton);
+            return ep.getEventsTypeDonaton();
         }catch (PetbookPersistenceException e){
             throw new PetbookServicesException(e.getMessage());
         }

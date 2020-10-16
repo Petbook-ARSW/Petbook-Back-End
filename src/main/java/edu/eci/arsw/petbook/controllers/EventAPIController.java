@@ -79,7 +79,7 @@ public class EventAPIController {
     @RequestMapping(path = "date/events/{eventdate}", method = RequestMethod.GET)
     public ResponseEntity<?> getEventXDate(@PathVariable(name = "eventdate") Date eventdate) {
         try {
-            return new ResponseEntity<>(es.getEventXDate(eventdate), HttpStatus.ACCEPTED);
+            return new ResponseEntity<>(es.getEventsXDate(eventdate), HttpStatus.ACCEPTED);
         } catch (PetbookServicesException ex) {
             return new ResponseEntity<>(null, HttpStatus.NOT_FOUND);
         }
@@ -88,7 +88,7 @@ public class EventAPIController {
     @RequestMapping(path = "donaton/events/{isDonaton}", method = RequestMethod.GET)
     public ResponseEntity<?> getEventsXDonaton(@PathVariable(name = "isDonaton") boolean isDonaton) {
         try {
-            return new ResponseEntity<>(es.getEventsTypeDonaton(isDonaton), HttpStatus.ACCEPTED);
+            return new ResponseEntity<>(es.getEventsTypeDonaton(), HttpStatus.ACCEPTED);
         } catch (PetbookServicesException ex) {
             return new ResponseEntity<>(null, HttpStatus.NOT_FOUND);
         }

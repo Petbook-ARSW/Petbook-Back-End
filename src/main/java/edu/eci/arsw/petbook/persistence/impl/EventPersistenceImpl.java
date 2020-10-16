@@ -93,19 +93,19 @@ public class EventPersistenceImpl implements IEventPersistence {
     }
 
     @Override
-    public Event getEventXDate(Date eventdate) throws PetbookPersistenceException {
+    public List<Event> getEventsXDate(Date eventdate) throws PetbookPersistenceException {
         Query query = entityManager.createNativeQuery("select * from companyevent where eventdate=?",Event.class);
         query.setParameter(1, eventdate);
         if (query.getResultList().size() == 0) {
             throw new PetbookPersistenceException("Event not found");
         }
-        return (Event) query.getSingleResult();
+        return query.getResultList();
     }
 
     @Override
-    public List<Event> getEventsTypeDonaton(boolean isDonaton)throws PetbookPersistenceException{
+    public List<Event> getEventsTypeDonaton( )throws PetbookPersistenceException{
         Query query = entityManager.createNativeQuery("select * from companyevent where isDonaton=?",Event.class);
-        query.setParameter(1, isDonaton);
+        query.setParameter(1, true);
         if (query.getResultList().size() == 0) {
             throw new PetbookPersistenceException("Events not found");
         }

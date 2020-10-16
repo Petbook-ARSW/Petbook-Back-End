@@ -22,9 +22,9 @@ public interface IEventServices {
 
     List<Event> getEventsXHost(int hostcompany) throws PetbookServicesException;
 
-    Event getEventXDate(Date eventdate)throws PetbookServicesException;
+    List<Event> getEventsXDate(Date eventdate)throws PetbookServicesException;
 
-    List<Event> getEventsTypeDonaton(boolean isDonaton)throws PetbookServicesException;
+    List<Event> getEventsTypeDonaton()throws PetbookServicesException;
 
     void removeEventXId(int id) throws PetbookServicesException;
 

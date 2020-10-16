@@ -2,6 +2,7 @@ package edu.eci.arsw.petbook.persistence.impl;
 
 import edu.eci.arsw.petbook.model.Event;
 import edu.eci.arsw.petbook.model.Goal;
+import edu.eci.arsw.petbook.model.Participant;
 import edu.eci.arsw.petbook.model.Raffle;
 import edu.eci.arsw.petbook.persistence.IEventPersistence;
 import edu.eci.arsw.petbook.persistence.PetbookPersistenceException;
@@ -186,6 +187,49 @@ public class EventPersistenceImpl implements IEventPersistence {
             throw new PetbookPersistenceException("Raffle not found");
         }
         return (Raffle) query.getSingleResult();
+    }
+
+    @Override
+    public void removeGoalXId(int id) throws PetbookPersistenceException {
+        try {
+            gr.delete(id);
+        }catch(Exception e){
+            throw new PetbookPersistenceException("Failed to remove goal");
+        }
+    }
+
+    @Override
+    public void updateGoal(Goal goal) throws PetbookPersistenceException {
+        try{
+            Goal temp = gr.findOne(goal.getId());
+            if (goal.getValor()>0){
+                temp.setValor(goal.getValor());
+            }
+            if (goal.isState()){
+                temp.setState(goal.isState());
+            }
+            if (!goal.getPrize().equals("")){
+                temp.setPrize(goal.getPrize());
+            }
+            saveGoal(temp);
+        }catch(Exception e){
+            throw new PetbookPersistenceException("Failed to update goal");
+        }
+    }
+
+    @Override
+    public void saveGoal(Goal goal) {
+        gr.save(goal);
+    }
+
+    @Override
+    public List<Participant> getParticipantsXEvento(int idevent) throws PetbookPersistenceException {
+        Query query = entityManager.createNativeQuery("select * from participants where idevent=?",Participant.class);
+        query.setParameter(1, idevent);
+        if (query.getResultList().size() == 0) {
+            throw new PetbookPersistenceException("Participant not found");
+        }
+        return query.getResultList();
     }
 
 }

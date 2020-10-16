@@ -151,4 +151,32 @@ public class EventAPIController {
         }
     }
 
+    @RequestMapping(path = "deleteGoal/events/goals/{id}", method = RequestMethod.DELETE)
+    public ResponseEntity<?> removeGoal(@PathVariable(name = "id") int id) {
+        try {
+            es.removeGoalXId(id);
+            return new ResponseEntity<>(HttpStatus.ACCEPTED);
+        } catch (PetbookServicesException ex) {
+            return new ResponseEntity<>(null, HttpStatus.NOT_FOUND);
+        }
+    }
+
+    @RequestMapping(path = "updateGoal/events/goals", method = RequestMethod.POST)
+    public ResponseEntity<?> UpdateGoal(@RequestBody Goal goal) {
+        try {
+            es.updateGoal(goal);
+            return new ResponseEntity<>(HttpStatus.ACCEPTED);
+        } catch (PetbookServicesException ex) {
+            return new ResponseEntity<>(null, HttpStatus.NOT_FOUND);
+        }
+    }
+
+    @RequestMapping(path = "/events/{idevent}/participants", method = RequestMethod.GET)
+    public ResponseEntity<?> getParticipantsXEventId(@PathVariable(name = "idevent") int idevent){
+        try{
+            return new ResponseEntity<>(es.getParticipantsXEvento(idevent),HttpStatus.ACCEPTED);
+        }catch (PetbookServicesException ex){
+            return new ResponseEntity<>(null, HttpStatus.NOT_FOUND);
+        }
+    }
 }

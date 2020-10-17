@@ -38,6 +38,10 @@ Peetbook es una aplicación web, un tipo de red social dirigida a veterinarias, 
      las que ingresarás el valor objetivo del evento y realizarás sorteos de premios entre usuarios que hayan contribuido, con el fin de incentivar a las personas a 
      que participen.
 
+### Despliegue en firebase 
+
+[petbookapp](https://petbookapp-74400.web.app/)
+
 ### Despliegue en heroku
 
 [![Deployed to Heroku](https://www.herokucdn.com/deploy/button.png)](https://petbook-api.herokuapp.com/)
@@ -49,7 +53,6 @@ Peetbook es una aplicación web, un tipo de red social dirigida a veterinarias, 
 ### Calidad de codigo
 
 [![Codacy Badge](https://app.codacy.com/project/badge/Grade/0a38c0cb9c804bd1a967ce127ac919f3)](https://www.codacy.com/gh/Petbook-ARSW/Petbook-Back-End/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=Petbook-ARSW/Petbook-Back-End&amp;utm_campaign=Badge_Grade)
-
 
 # _Arquitectura y diseño detallado de la aplicación_ 🐾 🦴
 
@@ -80,8 +83,12 @@ Peetbook es una aplicación web, un tipo de red social dirigida a veterinarias, 
    [Enlace a diagrama de componentes](https://github.com/Petbook-ARSW/Petbook-Back-End/blob/master/img/PetbookC%26C.png)
    
    ![alt text](https://raw.githubusercontent.com/Petbook-ARSW/Petbook-Back-End/master/img/PetbookC&C.png)
-   
+
+### Diagrama de despliegue 
+
+   ![alt text](https://raw.githubusercontent.com/Petbook-ARSW/Petbook-Back-End/master/img/PetbookDeployment.png)
+
 ### Mockups
 
-   ![Enlace a Mockups](https://github.com/Petbook-ARSW/Petbook-Back-End/blob/master/mockups.pdf)
+   [Enlace a Mockups](https://github.com/Petbook-ARSW/Petbook-Back-End/blob/master/mockups.pdf)
   

@@ -1,5 +1,6 @@
 package edu.eci.arsw.petbook.services.impl;
 
+import edu.eci.arsw.petbook.model.Participant;
 import edu.eci.arsw.petbook.model.User;
 import edu.eci.arsw.petbook.persistence.IUserPersistence;
 import edu.eci.arsw.petbook.persistence.PetbookPersistenceException;
@@ -38,6 +39,24 @@ public class UserServices implements IUserServices {
         } catch (PetbookPersistenceException e) {
             throw new PetbookServicesException(e.getMessage());
 
+        }
+    }
+
+    @Override
+    public void deleteParticipById(Participant participant) throws PetbookServicesException {
+        try {
+            up.deleteParticipById(participant);
+        } catch (PetbookPersistenceException e) {
+            throw new PetbookServicesException(e.getMessage());
+        }
+    }
+
+    @Override
+    public List<Participant> getAllParticipants() throws PetbookServicesException {
+        try{
+            return up.getAllParticipants();
+        }catch (PetbookPersistenceException e){
+            throw new PetbookServicesException(e.getMessage());
         }
     }
 

@@ -1,5 +1,6 @@
 package edu.eci.arsw.petbook.controllers;
 
+import edu.eci.arsw.petbook.model.Participant;
 import edu.eci.arsw.petbook.model.User;
 import edu.eci.arsw.petbook.services.IUserServices;
 import edu.eci.arsw.petbook.services.PetbookServicesException;
@@ -39,6 +40,24 @@ public class UserAPIController {
             return new ResponseEntity<>(null, null);
         }
     }
+    @RequestMapping(path = "/users/participInEnvent", method = RequestMethod.DELETE)
+    public ResponseEntity<?> removeParticipant(@RequestBody Participant participant) {
+        try {
+            us.deleteParticipById(participant);
+            return new ResponseEntity<>(HttpStatus.ACCEPTED);
+        } catch (PetbookServicesException ex) {
+            return new ResponseEntity<>(null, HttpStatus.NOT_FOUND);
+        }
+    }
+
+    @RequestMapping(path = "/users/participInEnvent", method = RequestMethod.GET)
+    public ResponseEntity<?> getAllParticipants(){
+        try{
+            return new ResponseEntity<>(us.getAllParticipants(),HttpStatus.ACCEPTED);
+        }catch (PetbookServicesException ex){
+            return new ResponseEntity<>(null, HttpStatus.NOT_FOUND);
+        }
+    }
 
     @RequestMapping(path = "/users/setUser", method = RequestMethod.PUT)
     public ResponseEntity<?> setUser(@RequestBody User user) {
@@ -67,6 +86,8 @@ public class UserAPIController {
             return new ResponseEntity<>(null, HttpStatus.NOT_FOUND);
         }
     }
+
+
 
     @RequestMapping(path = "/users/changeUser", method = RequestMethod.POST)
     public ResponseEntity<?> changeUsuario(@RequestBody User user){

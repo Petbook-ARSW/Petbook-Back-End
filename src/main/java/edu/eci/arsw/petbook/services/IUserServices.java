@@ -1,5 +1,6 @@
 package edu.eci.arsw.petbook.services;
 
+import edu.eci.arsw.petbook.model.Participant;
 import edu.eci.arsw.petbook.model.User;
 import java.util.List;
 
@@ -17,4 +18,6 @@ public interface IUserServices {
 
     void asistirEvento(int idevent,int iduser)throws PetbookServicesException;
 
+    void deleteParticipById(Participant participant)throws PetbookServicesException;
+    List<Participant> getAllParticipants()throws PetbookServicesException;
 }

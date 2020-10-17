@@ -1,6 +1,8 @@
+C:\Users\JuanHerrara\Documents\Universidad\2020-2\ARSW\Petbook-Back-End\src\main\java\edu\eci\arsw\petbook\persistence\repo\IRaffleRepo.java
 C:\Users\JuanHerrara\Documents\Universidad\2020-2\ARSW\Petbook-Back-End\src\main\java\edu\eci\arsw\petbook\controllers\EventAPIController.java
 C:\Users\JuanHerrara\Documents\Universidad\2020-2\ARSW\Petbook-Back-End\src\main\java\edu\eci\arsw\petbook\persistence\IUserPersistence.java
 C:\Users\JuanHerrara\Documents\Universidad\2020-2\ARSW\Petbook-Back-End\src\main\java\edu\eci\arsw\petbook\controllers\PetAPIController.java
+C:\Users\JuanHerrara\Documents\Universidad\2020-2\ARSW\Petbook-Back-End\src\main\java\edu\eci\arsw\petbook\model\Raffle.java
 C:\Users\JuanHerrara\Documents\Universidad\2020-2\ARSW\Petbook-Back-End\src\main\java\edu\eci\arsw\petbook\services\IEventServices.java
 C:\Users\JuanHerrara\Documents\Universidad\2020-2\ARSW\Petbook-Back-End\src\main\java\edu\eci\arsw\petbook\persistence\repo\IEventRepo.java
 C:\Users\JuanHerrara\Documents\Universidad\2020-2\ARSW\Petbook-Back-End\src\main\java\edu\eci\arsw\petbook\services\IUserServices.java
@@ -18,10 +20,10 @@ C:\Users\JuanHerrara\Documents\Universidad\2020-2\ARSW\Petbook-Back-End\src\main
 C:\Users\JuanHerrara\Documents\Universidad\2020-2\ARSW\Petbook-Back-End\src\main\java\edu\eci\arsw\petbook\persistence\repo\IGoalRepo.java
 C:\Users\JuanHerrara\Documents\Universidad\2020-2\ARSW\Petbook-Back-End\src\main\java\edu\eci\arsw\petbook\services\impl\EventServices.java
 C:\Users\JuanHerrara\Documents\Universidad\2020-2\ARSW\Petbook-Back-End\src\main\java\edu\eci\arsw\petbook\model\Person.java
+C:\Users\JuanHerrara\Documents\Universidad\2020-2\ARSW\Petbook-Back-End\src\main\java\edu\eci\arsw\petbook\services\IPetServices.java
 C:\Users\JuanHerrara\Documents\Universidad\2020-2\ARSW\Petbook-Back-End\src\main\java\edu\eci\arsw\petbook\controllers\UserAPIController.java
 C:\Users\JuanHerrara\Documents\Universidad\2020-2\ARSW\Petbook-Back-End\src\main\java\edu\eci\arsw\petbook\persistence\impl\UserPersistenceImpl.java
 C:\Users\JuanHerrara\Documents\Universidad\2020-2\ARSW\Petbook-Back-End\src\main\java\edu\eci\arsw\petbook\model\Company.java
-C:\Users\JuanHerrara\Documents\Universidad\2020-2\ARSW\Petbook-Back-End\src\main\java\edu\eci\arsw\petbook\services\PetPersistenceImpl.java
 C:\Users\JuanHerrara\Documents\Universidad\2020-2\ARSW\Petbook-Back-End\src\main\java\edu\eci\arsw\petbook\persistence\repo\IParticipantRepo.java
 C:\Users\JuanHerrara\Documents\Universidad\2020-2\ARSW\Petbook-Back-End\src\main\java\edu\eci\arsw\petbook\services\impl\UserServices.java
 C:\Users\JuanHerrara\Documents\Universidad\2020-2\ARSW\Petbook-Back-End\src\main\java\edu\eci\arsw\petbook\persistence\impl\EventPersistenceImpl.java

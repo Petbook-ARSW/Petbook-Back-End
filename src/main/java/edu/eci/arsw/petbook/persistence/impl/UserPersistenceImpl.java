@@ -43,7 +43,27 @@ public class UserPersistenceImpl implements IUserPersistence {
         //insert into companyevent (eventname, isDonaton, address, eventdate, eventhour, information, hostcompany) values ('Jornada de vacunación', true, 'cll 55a No343c - 5', '2020-12-16', '13:00', 'sin info', 4);
         Query query = entityManager.createNativeQuery("insert into participants (iduser,idevent) values (?,?)",Participant.class);
         query.setParameter(1, iduser).setParameter(2, idevent);
+        Participant temp = new Participant();
+        temp.setIdevent(idevent);
+        temp.setIduser(iduser);
+        saveParticiapnt(temp);
+    }
 
+    @Override
+    public void deleteParticipById(Participant participant) throws PetbookPersistenceException {
+        try {
+            pr.delete(participant.getId());
+        }catch(Exception e){
+            throw new PetbookPersistenceException("Failed to remove pet");
+        }
+    }
+
+    @Override
+    public List<Participant> getAllParticipants() throws PetbookPersistenceException {
+        if(pr.count() == 0){
+            throw new PetbookPersistenceException("Participants not found");
+        }
+        return pr.findAll();
     }
 
 
@@ -82,6 +102,11 @@ public class UserPersistenceImpl implements IUserPersistence {
     @Override
     public void saveUsuario(User usuario) {
         ur.save(usuario);
+    }
+
+    @Override
+    public void saveParticiapnt(Participant participant) throws PetbookPersistenceException {
+        pr.save(participant);
     }
 
     @Override

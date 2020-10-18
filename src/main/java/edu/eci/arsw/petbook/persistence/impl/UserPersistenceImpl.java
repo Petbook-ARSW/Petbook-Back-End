@@ -66,7 +66,15 @@ public class UserPersistenceImpl implements IUserPersistence {
         return pr.findAll();
     }
 
-
+    @Override
+    public User getUserById(int idUser) throws PetbookPersistenceException {
+        User user = ur.findOne(idUser);
+        if (user.equals(null)){
+            throw new PetbookPersistenceException("User not found");
+        }
+        return user;
+    }
+    
     @Override
     public void setUser(User user) throws PetbookPersistenceException {
         //falta implementar

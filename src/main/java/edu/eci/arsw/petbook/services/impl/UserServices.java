@@ -61,6 +61,15 @@ public class UserServices implements IUserServices {
     }
 
     @Override
+    public User getUserById(int idUser) throws PetbookServicesException {
+        try{
+            return up.getUserById(idUser);
+        }catch (PetbookPersistenceException e){
+            throw new PetbookServicesException(e.getMessage());
+        }
+    }
+
+    @Override
     public void setUser(User user) throws PetbookServicesException {
         try{
             up.setUser(user);

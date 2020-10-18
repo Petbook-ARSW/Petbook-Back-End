@@ -23,10 +23,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="dd44b8ea-536f-4563-95f5-ab0e649cb417" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/img/PetbookDeployment.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Petbook.asta" beforeDir="false" afterPath="$PROJECT_DIR$/Petbook.asta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/eci/arsw/petbook/controllers/UserAPIController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/eci/arsw/petbook/controllers/UserAPIController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/eci/arsw/petbook/persistence/IUserPersistence.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/eci/arsw/petbook/persistence/IUserPersistence.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/eci/arsw/petbook/persistence/impl/UserPersistenceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/eci/arsw/petbook/persistence/impl/UserPersistenceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/eci/arsw/petbook/services/IUserServices.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/eci/arsw/petbook/services/IUserServices.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/eci/arsw/petbook/services/impl/UserServices.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/eci/arsw/petbook/services/impl/UserServices.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -109,6 +111,17 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -226,6 +239,7 @@
       <workItem from="1602876898918" duration="4003000" />
       <workItem from="1602883430428" duration="5312000" />
       <workItem from="1602975664520" duration="1359000" />
+      <workItem from="1603059644941" duration="1392000" />
     </task>
     <servers />
   </component>
@@ -260,9 +274,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="92" y="92" width="1182" height="544" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog/0.0.1366.728@0.0.1366.728" timestamp="1602886743535" />
-    <state x="685" y="122" key="#com.intellij.ide.util.MemberChooser" timestamp="1602973212487">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="487" y="90" key="#com.intellij.ide.util.MemberChooser" timestamp="1603060885776">
+      <screen x="0" y="0" width="1366" height="768" />
     </state>
+    <state x="487" y="90" key="#com.intellij.ide.util.MemberChooser/0.0.1366.768@0.0.1366.768" timestamp="1603060885776" />
     <state x="685" y="122" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1602973212487" />
     <state x="485" y="90" key="#com.intellij.ide.util.MemberChooser/1360.0.1366.768/0.0.1360.768@0.0.1360.768" timestamp="1602817418015" />
     <state x="413" y="139" key="#com.intellij.ide.util.PackageChooserDialog" timestamp="1602877907509">
@@ -273,25 +288,29 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="690" y="267" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1602727930983" />
-    <state width="1323" height="389" key="GridCell.Tab.0.bottom" timestamp="1602890803658">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state width="1323" height="500" key="GridCell.Tab.0.bottom" timestamp="1603061081719">
+      <screen x="0" y="0" width="1366" height="768" />
     </state>
     <state width="1323" height="389" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1602890803658" />
+    <state width="1323" height="500" key="GridCell.Tab.0.bottom/0.0.1366.768@0.0.1366.768" timestamp="1603061081719" />
     <state width="1317" height="182" key="GridCell.Tab.0.bottom/1360.0.1366.768/0.0.1360.768@0.0.1360.768" timestamp="1602817767133" />
-    <state width="1323" height="389" key="GridCell.Tab.0.center" timestamp="1602890803658">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state width="1323" height="500" key="GridCell.Tab.0.center" timestamp="1603061081719">
+      <screen x="0" y="0" width="1366" height="768" />
     </state>
     <state width="1323" height="389" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1602890803658" />
+    <state width="1323" height="500" key="GridCell.Tab.0.center/0.0.1366.768@0.0.1366.768" timestamp="1603061081719" />
     <state width="1317" height="182" key="GridCell.Tab.0.center/1360.0.1366.768/0.0.1360.768@0.0.1360.768" timestamp="1602817767133" />
-    <state width="1323" height="389" key="GridCell.Tab.0.left" timestamp="1602890803658">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state width="1323" height="500" key="GridCell.Tab.0.left" timestamp="1603061081719">
+      <screen x="0" y="0" width="1366" height="768" />
     </state>
     <state width="1323" height="389" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1602890803658" />
+    <state width="1323" height="500" key="GridCell.Tab.0.left/0.0.1366.768@0.0.1366.768" timestamp="1603061081719" />
     <state width="1317" height="182" key="GridCell.Tab.0.left/1360.0.1366.768/0.0.1360.768@0.0.1360.768" timestamp="1602817767133" />
-    <state width="1323" height="389" key="GridCell.Tab.0.right" timestamp="1602890803658">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state width="1323" height="500" key="GridCell.Tab.0.right" timestamp="1603061081719">
+      <screen x="0" y="0" width="1366" height="768" />
     </state>
     <state width="1323" height="389" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1602890803658" />
+    <state width="1323" height="500" key="GridCell.Tab.0.right/0.0.1366.768@0.0.1366.768" timestamp="1603061081719" />
     <state width="1317" height="182" key="GridCell.Tab.0.right/1360.0.1366.768/0.0.1360.768@0.0.1360.768" timestamp="1602817767133" />
     <state width="1323" height="389" key="GridCell.Tab.1.bottom" timestamp="1602890803669">
       <screen x="0" y="0" width="1366" height="728" />

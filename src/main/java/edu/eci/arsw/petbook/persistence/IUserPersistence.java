@@ -26,5 +26,7 @@ public interface IUserPersistence {
     void deleteParticipById(Participant participant)throws PetbookPersistenceException;
 
     List<Participant> getAllParticipants()throws PetbookPersistenceException;
+
+    User getUserById(int idUser)throws PetbookPersistenceException;
 }
 

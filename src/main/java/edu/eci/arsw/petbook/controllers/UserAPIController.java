@@ -87,7 +87,14 @@ public class UserAPIController {
         }
     }
 
-
+    @RequestMapping(path = "/users/id/{idUser}", method = RequestMethod.GET)
+    public ResponseEntity<?> getUserById(@PathVariable(name = "idUser") int idUser) {
+        try {
+            return new ResponseEntity<>(us.getUserById(idUser), HttpStatus.ACCEPTED);
+        } catch (PetbookServicesException ex) {
+            return new ResponseEntity<>(null, HttpStatus.NOT_FOUND);
+        }
+    }
 
     @RequestMapping(path = "/users/changeUser", method = RequestMethod.POST)
     public ResponseEntity<?> changeUsuario(@RequestBody User user){

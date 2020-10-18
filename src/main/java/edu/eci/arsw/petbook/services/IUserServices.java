@@ -19,5 +19,8 @@ public interface IUserServices {
     void asistirEvento(int idevent,int iduser)throws PetbookServicesException;
 
     void deleteParticipById(Participant participant)throws PetbookServicesException;
+
     List<Participant> getAllParticipants()throws PetbookServicesException;
+
+    User getUserById(int idUser)throws PetbookServicesException;
 }

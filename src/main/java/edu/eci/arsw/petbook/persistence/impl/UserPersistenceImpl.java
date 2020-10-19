@@ -50,9 +50,11 @@ public class UserPersistenceImpl implements IUserPersistence {
     }
 
     @Override
-    public void deleteParticipById(Participant participant) throws PetbookPersistenceException {
+    public void deleteParticipById(int idevent, int iduser) throws PetbookPersistenceException {
         try {
-            pr.delete(participant.getId());
+            Query query = entityManager.createNativeQuery("select * from participants where  idevent=? and iduser=?",Participant.class);
+            query.setParameter(1, idevent).setParameter(2, iduser);
+            pr.delete((Participant) query.getSingleResult());
         }catch(Exception e){
             throw new PetbookPersistenceException("Failed to remove pet");
         }

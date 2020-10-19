@@ -1,13 +1,12 @@
 package edu.eci.arsw.petbook.controllers;
 
-import edu.eci.arsw.petbook.model.Participant;
 import edu.eci.arsw.petbook.model.User;
 import edu.eci.arsw.petbook.services.IUserServices;
 import edu.eci.arsw.petbook.services.PetbookServicesException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
-import org.springframework.web.bind.annotation.*;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @CrossOrigin(origins = "*")
@@ -40,10 +39,10 @@ public class UserAPIController {
             return new ResponseEntity<>(null, null);
         }
     }
-    @RequestMapping(path = "/users/participInEnvent", method = RequestMethod.DELETE)
-    public ResponseEntity<?> removeParticipant(@RequestBody Participant participant) {
+    @RequestMapping(path = "users/participInEnvent/{idevent}/{iduser}", method = RequestMethod.DELETE)
+    public ResponseEntity<?> removeParticipant(@PathVariable(name = "idevent") int idevent, @PathVariable(name = "iduser") int iduser) {
         try {
-            us.deleteParticipById(participant);
+            us.deleteParticipById(idevent, iduser);
             return new ResponseEntity<>(HttpStatus.ACCEPTED);
         } catch (PetbookServicesException ex) {
             return new ResponseEntity<>(null, HttpStatus.NOT_FOUND);

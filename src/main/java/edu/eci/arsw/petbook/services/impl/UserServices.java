@@ -43,9 +43,9 @@ public class UserServices implements IUserServices {
     }
 
     @Override
-    public void deleteParticipById(Participant participant) throws PetbookServicesException {
+    public void deleteParticipById(int idevent, int iduser) throws PetbookServicesException {
         try {
-            up.deleteParticipById(participant);
+            up.deleteParticipById(idevent, iduser);
         } catch (PetbookPersistenceException e) {
             throw new PetbookServicesException(e.getMessage());
         }

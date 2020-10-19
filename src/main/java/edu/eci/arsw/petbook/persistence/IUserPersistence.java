@@ -23,7 +23,7 @@ public interface IUserPersistence {
 
     void asistirEvento(int idevent,int iduser)throws PetbookPersistenceException;
 
-    void deleteParticipById(Participant participant)throws PetbookPersistenceException;
+    void deleteParticipById(int idevent, int iduser)throws PetbookPersistenceException;
 
     List<Participant> getAllParticipants()throws PetbookPersistenceException;
 

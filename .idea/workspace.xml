@@ -24,11 +24,7 @@
   <component name="ChangeListManager">
     <list default="true" id="dd44b8ea-536f-4563-95f5-ab0e649cb417" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/eci/arsw/petbook/controllers/UserAPIController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/eci/arsw/petbook/controllers/UserAPIController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/eci/arsw/petbook/persistence/IUserPersistence.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/eci/arsw/petbook/persistence/IUserPersistence.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/eci/arsw/petbook/persistence/impl/UserPersistenceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/eci/arsw/petbook/persistence/impl/UserPersistenceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/eci/arsw/petbook/services/IUserServices.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/eci/arsw/petbook/services/IUserServices.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/eci/arsw/petbook/services/impl/UserServices.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/eci/arsw/petbook/services/impl/UserServices.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -230,6 +226,8 @@
       <workItem from="1602975664520" duration="1359000" />
       <workItem from="1603059644941" duration="1392000" />
       <workItem from="1603066346473" duration="1915000" />
+      <workItem from="1603072383066" duration="14000" />
+      <workItem from="1603090446962" duration="512000" />
     </task>
     <servers />
   </component>

@@ -94,4 +94,4 @@ Peetbook es una aplicación web, un tipo de red social dirigida a veterinarias, 
   
 ### Manual de usuario
 
-   [Petbook - User manual](https://angi-jimenez.gitbook.io/petbook-user-manual/)
+   [Petbook - Manual de usuario](https://angi-jimenez.gitbook.io/petbook-user-manual/)

@@ -1,6 +1,7 @@
 package edu.eci.arsw.petbook.services.impl;
 
 import edu.eci.arsw.petbook.model.Participant;
+import edu.eci.arsw.petbook.model.Post;
 import edu.eci.arsw.petbook.model.User;
 import edu.eci.arsw.petbook.persistence.IUserPersistence;
 import edu.eci.arsw.petbook.persistence.PetbookPersistenceException;
@@ -21,6 +22,7 @@ public class UserServices implements IUserServices {
     public UserServices(){
 
     }
+
 
     @Override
     public void addUser(User user) throws PetbookServicesException {
@@ -60,6 +62,7 @@ public class UserServices implements IUserServices {
         }
     }
 
+
     @Override
     public User getUserById(int idUser) throws PetbookServicesException {
         try{
@@ -68,6 +71,19 @@ public class UserServices implements IUserServices {
             throw new PetbookServicesException(e.getMessage());
         }
     }
+
+    @Override
+    public void newPost(Post post) throws PetbookServicesException {
+        try{
+            up.newPost(post);
+        }catch (PetbookPersistenceException e){
+            throw new PetbookServicesException(e.getMessage());
+        }
+    }
+
+
+
+
 
     @Override
     public void setUser(User user) throws PetbookServicesException {
@@ -82,6 +98,15 @@ public class UserServices implements IUserServices {
     public List<User> getAllUsers() throws PetbookServicesException {
         try{
             return up.getAllUsers();
+        }catch (PetbookPersistenceException e){
+            throw new PetbookServicesException(e.getMessage());
+        }
+    }
+
+    @Override
+    public List<Post> getAllPost() throws PetbookServicesException {
+        try{
+            return up.getAllPost();
         }catch (PetbookPersistenceException e){
             throw new PetbookServicesException(e.getMessage());
         }

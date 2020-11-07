@@ -1,7 +1,9 @@
 package edu.eci.arsw.petbook.services;
 
 import edu.eci.arsw.petbook.model.Participant;
+import edu.eci.arsw.petbook.model.Post;
 import edu.eci.arsw.petbook.model.User;
+
 import java.util.List;
 
 public interface IUserServices {
@@ -23,4 +25,8 @@ public interface IUserServices {
     List<Participant> getAllParticipants()throws PetbookServicesException;
 
     User getUserById(int idUser)throws PetbookServicesException;
+
+    void newPost(Post post) throws PetbookServicesException;
+
+    List<Post> getAllPost()throws PetbookServicesException;
 }

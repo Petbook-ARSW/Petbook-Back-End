@@ -24,8 +24,10 @@ C:\Users\JuanHerrara\Documents\Universidad\2020-2\ARSW\Petbook-Back-End\src\main
 C:\Users\JuanHerrara\Documents\Universidad\2020-2\ARSW\Petbook-Back-End\src\main\java\edu\eci\arsw\petbook\controllers\UserAPIController.java
 C:\Users\JuanHerrara\Documents\Universidad\2020-2\ARSW\Petbook-Back-End\src\main\java\edu\eci\arsw\petbook\persistence\impl\UserPersistenceImpl.java
 C:\Users\JuanHerrara\Documents\Universidad\2020-2\ARSW\Petbook-Back-End\src\main\java\edu\eci\arsw\petbook\model\Company.java
+C:\Users\JuanHerrara\Documents\Universidad\2020-2\ARSW\Petbook-Back-End\src\main\java\edu\eci\arsw\petbook\persistence\repo\IPostRepo.java
 C:\Users\JuanHerrara\Documents\Universidad\2020-2\ARSW\Petbook-Back-End\src\main\java\edu\eci\arsw\petbook\persistence\repo\IParticipantRepo.java
 C:\Users\JuanHerrara\Documents\Universidad\2020-2\ARSW\Petbook-Back-End\src\main\java\edu\eci\arsw\petbook\services\impl\UserServices.java
+C:\Users\JuanHerrara\Documents\Universidad\2020-2\ARSW\Petbook-Back-End\src\main\java\edu\eci\arsw\petbook\model\Post.java
 C:\Users\JuanHerrara\Documents\Universidad\2020-2\ARSW\Petbook-Back-End\src\main\java\edu\eci\arsw\petbook\persistence\impl\EventPersistenceImpl.java
 C:\Users\JuanHerrara\Documents\Universidad\2020-2\ARSW\Petbook-Back-End\src\main\java\edu\eci\arsw\petbook\services\PetbookServicesException.java
 C:\Users\JuanHerrara\Documents\Universidad\2020-2\ARSW\Petbook-Back-End\src\main\java\edu\eci\arsw\petbook\model\User.java

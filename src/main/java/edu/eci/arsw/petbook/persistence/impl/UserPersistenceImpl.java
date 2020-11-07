@@ -1,10 +1,12 @@
 package edu.eci.arsw.petbook.persistence.impl;
 
 import edu.eci.arsw.petbook.model.Participant;
+import edu.eci.arsw.petbook.model.Post;
 import edu.eci.arsw.petbook.model.User;
 import edu.eci.arsw.petbook.persistence.IUserPersistence;
 import edu.eci.arsw.petbook.persistence.PetbookPersistenceException;
 import edu.eci.arsw.petbook.persistence.repo.IParticipantRepo;
+import edu.eci.arsw.petbook.persistence.repo.IPostRepo;
 import edu.eci.arsw.petbook.persistence.repo.IUserRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
@@ -22,6 +24,9 @@ public class UserPersistenceImpl implements IUserPersistence {
 
     @Autowired
     IParticipantRepo pr;
+
+    @Autowired
+    IPostRepo pt;
 
     @PersistenceContext
     EntityManager entityManager;
@@ -60,6 +65,8 @@ public class UserPersistenceImpl implements IUserPersistence {
         }
     }
 
+
+
     @Override
     public List<Participant> getAllParticipants() throws PetbookPersistenceException {
         if(pr.count() == 0){
@@ -90,6 +97,13 @@ public class UserPersistenceImpl implements IUserPersistence {
         return ur.findAll();
     }
 
+    @Override
+    public List<Post> getAllPost() throws PetbookPersistenceException {
+        if(pt.count()==0){
+            throw new PetbookPersistenceException("Post not found");
+        }
+        return pt.findAll();
+    }
 
     @Override
     public void changeUser(User user) throws PetbookPersistenceException {
@@ -110,13 +124,30 @@ public class UserPersistenceImpl implements IUserPersistence {
     }
 
     @Override
-    public void saveUsuario(User usuario) {
+    public void newPost(Post post) throws PetbookPersistenceException {
+        Post temp = new Post();
+        temp.setIduser(post.getIduser());
+        temp.setBirthdate(post.getBirthdate());
+        temp.setDescriptio(post.getDescriptio());
+        temp.setPhoto(post.getPhoto());
+        savePost(temp);
+    }
+
+
+
+    @Override
+    public void saveUsuario(User usuario)throws PetbookPersistenceException {
         ur.save(usuario);
     }
 
     @Override
     public void saveParticiapnt(Participant participant) throws PetbookPersistenceException {
         pr.save(participant);
+    }
+
+    @Override
+    public void savePost(Post post)  throws PetbookPersistenceException{
+        pt.save(post);
     }
 
     @Override

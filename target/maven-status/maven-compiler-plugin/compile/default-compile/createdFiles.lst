@@ -10,6 +10,7 @@ edu\eci\arsw\petbook\services\PetbookServicesException.class
 edu\eci\arsw\petbook\persistence\repo\IPetRepo.class
 edu\eci\arsw\petbook\services\IEventServices.class
 edu\eci\arsw\petbook\model\Company.class
+edu\eci\arsw\petbook\model\Post.class
 edu\eci\arsw\petbook\persistence\PetbookPersistenceException.class
 edu\eci\arsw\petbook\services\IPetServices.class
 edu\eci\arsw\petbook\controllers\UserAPIController.class
@@ -27,5 +28,6 @@ edu\eci\arsw\petbook\persistence\IUserPersistence.class
 edu\eci\arsw\petbook\services\impl\PetServices.class
 edu\eci\arsw\petbook\controllers\PetAPIController.class
 edu\eci\arsw\petbook\persistence\repo\IGoalRepo.class
+edu\eci\arsw\petbook\persistence\repo\IPostRepo.class
 edu\eci\arsw\petbook\model\Event.class
 edu\eci\arsw\petbook\persistence\IPetPersistence.class

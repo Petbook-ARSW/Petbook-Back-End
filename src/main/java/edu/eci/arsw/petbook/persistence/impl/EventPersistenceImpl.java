@@ -119,7 +119,6 @@ public class EventPersistenceImpl implements IEventPersistence {
         }catch(Exception e){
             throw new PetbookPersistenceException("Failed to remove event");
         }
-
     }
 
     @Override

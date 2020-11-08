@@ -23,72 +23,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="dd44b8ea-536f-4563-95f5-ab0e649cb417" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_websocket_1_4_1_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_messaging_4_3_3_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_websocket_4_3_3_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_webjars_stomp_websocket_2_3_3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/edu/eci/arsw/petbook/WebSocketConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Petbook.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Petbook.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/eci/arsw/petbook/controllers/UserAPIController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/eci/arsw/petbook/controllers/UserAPIController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/eci/arsw/petbook/controllers/PostAPIController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/eci/arsw/petbook/controllers/PostAPIController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/edu/eci/arsw/petbook/model/Post.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/eci/arsw/petbook/model/Post.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/eci/arsw/petbook/persistence/IUserPersistence.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/eci/arsw/petbook/persistence/IUserPersistence.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/eci/arsw/petbook/persistence/impl/UserPersistenceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/eci/arsw/petbook/persistence/impl/UserPersistenceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/eci/arsw/petbook/services/IUserServices.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/eci/arsw/petbook/services/IUserServices.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/eci/arsw/petbook/services/impl/UserServices.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/eci/arsw/petbook/services/impl/UserServices.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/.netbeans_automatic_build" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/eci/arsw/petbook/PetbookAPIApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/eci/arsw/petbook/PetbookAPIApplication.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/eci/arsw/petbook/controllers/DonationAPIController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/eci/arsw/petbook/controllers/DonationAPIController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/eci/arsw/petbook/controllers/EventAPIController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/eci/arsw/petbook/controllers/EventAPIController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/eci/arsw/petbook/controllers/PetAPIController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/eci/arsw/petbook/controllers/PetAPIController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/eci/arsw/petbook/controllers/UserAPIController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/eci/arsw/petbook/controllers/UserAPIController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/eci/arsw/petbook/model/Company.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/eci/arsw/petbook/model/Company.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/eci/arsw/petbook/model/Donation.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/eci/arsw/petbook/model/Donation.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/eci/arsw/petbook/model/Donaton.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/eci/arsw/petbook/model/Donaton.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/eci/arsw/petbook/model/Event.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/eci/arsw/petbook/model/Event.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/eci/arsw/petbook/model/Goal.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/eci/arsw/petbook/model/Goal.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/eci/arsw/petbook/model/Participant.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/eci/arsw/petbook/model/Participant.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/eci/arsw/petbook/model/Person.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/eci/arsw/petbook/model/Person.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/eci/arsw/petbook/model/Pet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/eci/arsw/petbook/model/Pet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/eci/arsw/petbook/model/Post.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/eci/arsw/petbook/model/Post.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/eci/arsw/petbook/model/Raffle.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/eci/arsw/petbook/model/Raffle.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/eci/arsw/petbook/model/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/eci/arsw/petbook/model/User.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/eci/arsw/petbook/persistence/IDonationPersistence.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/eci/arsw/petbook/persistence/IDonationPersistence.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/eci/arsw/petbook/persistence/IEventPersistence.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/eci/arsw/petbook/persistence/IEventPersistence.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/eci/arsw/petbook/persistence/IPetPersistence.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/eci/arsw/petbook/persistence/IPetPersistence.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/eci/arsw/petbook/persistence/IUserPersistence.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/eci/arsw/petbook/persistence/IUserPersistence.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/eci/arsw/petbook/persistence/PetbookPersistenceException.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/eci/arsw/petbook/persistence/PetbookPersistenceException.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/eci/arsw/petbook/persistence/impl/DonationPersistenceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/eci/arsw/petbook/persistence/impl/DonationPersistenceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/eci/arsw/petbook/persistence/impl/EventPersistenceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/eci/arsw/petbook/persistence/impl/EventPersistenceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/eci/arsw/petbook/persistence/impl/PetPersistenceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/eci/arsw/petbook/persistence/impl/PetPersistenceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/eci/arsw/petbook/persistence/impl/UserPersistenceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/eci/arsw/petbook/persistence/impl/UserPersistenceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/eci/arsw/petbook/persistence/repo/IDonationRepo.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/eci/arsw/petbook/persistence/repo/IDonationRepo.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/eci/arsw/petbook/persistence/repo/IEventRepo.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/eci/arsw/petbook/persistence/repo/IEventRepo.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/eci/arsw/petbook/persistence/repo/IGoalRepo.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/eci/arsw/petbook/persistence/repo/IGoalRepo.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/eci/arsw/petbook/persistence/repo/IParticipantRepo.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/eci/arsw/petbook/persistence/repo/IParticipantRepo.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/eci/arsw/petbook/persistence/repo/IPetRepo.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/eci/arsw/petbook/persistence/repo/IPetRepo.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/eci/arsw/petbook/persistence/repo/IPostRepo.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/eci/arsw/petbook/persistence/repo/IPostRepo.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/eci/arsw/petbook/persistence/repo/IRaffleRepo.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/eci/arsw/petbook/persistence/repo/IRaffleRepo.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/eci/arsw/petbook/persistence/repo/IUserRepo.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/eci/arsw/petbook/persistence/repo/IUserRepo.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/eci/arsw/petbook/services/IDonationServices.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/eci/arsw/petbook/services/IDonationServices.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/eci/arsw/petbook/services/IEventServices.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/eci/arsw/petbook/services/IEventServices.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/eci/arsw/petbook/services/IPetServices.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/eci/arsw/petbook/services/IPetServices.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/eci/arsw/petbook/services/IUserServices.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/eci/arsw/petbook/services/IUserServices.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/eci/arsw/petbook/services/PetbookServicesException.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/eci/arsw/petbook/services/PetbookServicesException.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/eci/arsw/petbook/services/impl/DonationServices.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/eci/arsw/petbook/services/impl/DonationServices.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/eci/arsw/petbook/services/impl/EventServices.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/eci/arsw/petbook/services/impl/EventServices.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/eci/arsw/petbook/services/impl/PetServices.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/eci/arsw/petbook/services/impl/PetServices.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/eci/arsw/petbook/services/impl/UserServices.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/eci/arsw/petbook/services/impl/UserServices.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/.netbeans_automatic_build" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/edu/eci/arsw/petbook/EventServicesTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/edu/eci/arsw/petbook/EventServicesTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/edu/eci/arsw/petbook/UserServicesTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/edu/eci/arsw/petbook/UserServicesTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/eci/arsw/petbook/persistence/IPostPersistence.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/eci/arsw/petbook/persistence/IPostPersistence.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/eci/arsw/petbook/persistence/impl/EventPersistenceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/eci/arsw/petbook/persistence/impl/EventPersistenceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/eci/arsw/petbook/persistence/impl/PostPersistenceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/eci/arsw/petbook/persistence/impl/PostPersistenceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/eci/arsw/petbook/services/IPostServices.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/eci/arsw/petbook/services/IPostServices.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/eci/arsw/petbook/services/impl/PostServices.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/eci/arsw/petbook/services/impl/PostServices.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -179,17 +121,6 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -314,7 +245,8 @@
       <workItem from="1604791944179" duration="11000" />
       <workItem from="1604791996431" duration="5608000" />
       <workItem from="1604861849904" duration="40000" />
-      <workItem from="1604861933407" duration="2041000" />
+      <workItem from="1604861933407" duration="2686000" />
+      <workItem from="1604871557254" duration="4709000" />
     </task>
     <servers />
   </component>
@@ -349,9 +281,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="92" y="92" width="1182" height="544" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog/0.0.1366.728@0.0.1366.728" timestamp="1602886743535" />
-    <state x="685" y="122" key="#com.intellij.ide.util.MemberChooser" timestamp="1604789654189">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="487" y="85" key="#com.intellij.ide.util.MemberChooser" timestamp="1604875900942">
+      <screen x="0" y="0" width="1366" height="728" />
     </state>
+    <state x="487" y="85" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728@0.0.1366.728" timestamp="1604875900942" />
     <state x="487" y="90" key="#com.intellij.ide.util.MemberChooser/0.0.1366.768@0.0.1366.768" timestamp="1603060885776" />
     <state x="685" y="122" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1604789654189" />
     <state x="485" y="90" key="#com.intellij.ide.util.MemberChooser/1360.0.1366.768/0.0.1360.768@0.0.1360.768" timestamp="1602817418015" />
@@ -368,31 +301,31 @@
     </state>
     <state x="690" y="267" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1602727930983" />
     <state x="489" y="197" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/1360.0.1366.768/0.0.1360.768@0.0.1360.768" timestamp="1604792868514" />
-    <state width="1317" height="182" key="GridCell.Tab.0.bottom" timestamp="1604792763586">
-      <screen x="0" y="0" width="1360" height="768" />
+    <state width="1323" height="191" key="GridCell.Tab.0.bottom" timestamp="1604876399328">
+      <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="389" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1602890803658" />
+    <state width="1323" height="191" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1604876399328" />
     <state width="1323" height="160" key="GridCell.Tab.0.bottom/0.0.1366.768@0.0.1366.768" timestamp="1603068248261" />
     <state width="1877" height="282" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1604790562382" />
     <state width="1317" height="182" key="GridCell.Tab.0.bottom/1360.0.1366.768/0.0.1360.768@0.0.1360.768" timestamp="1604792763586" />
-    <state width="1317" height="182" key="GridCell.Tab.0.center" timestamp="1604792763586">
-      <screen x="0" y="0" width="1360" height="768" />
+    <state width="1323" height="191" key="GridCell.Tab.0.center" timestamp="1604876399328">
+      <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="389" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1602890803658" />
+    <state width="1323" height="191" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1604876399328" />
     <state width="1323" height="160" key="GridCell.Tab.0.center/0.0.1366.768@0.0.1366.768" timestamp="1603068248261" />
     <state width="1877" height="282" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1604790562382" />
     <state width="1317" height="182" key="GridCell.Tab.0.center/1360.0.1366.768/0.0.1360.768@0.0.1360.768" timestamp="1604792763586" />
-    <state width="1317" height="182" key="GridCell.Tab.0.left" timestamp="1604792763585">
-      <screen x="0" y="0" width="1360" height="768" />
+    <state width="1323" height="191" key="GridCell.Tab.0.left" timestamp="1604876399328">
+      <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="389" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1602890803658" />
+    <state width="1323" height="191" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1604876399328" />
     <state width="1323" height="160" key="GridCell.Tab.0.left/0.0.1366.768@0.0.1366.768" timestamp="1603068248261" />
     <state width="1877" height="282" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1604790562382" />
     <state width="1317" height="182" key="GridCell.Tab.0.left/1360.0.1366.768/0.0.1360.768@0.0.1360.768" timestamp="1604792763585" />
-    <state width="1317" height="182" key="GridCell.Tab.0.right" timestamp="1604792763586">
-      <screen x="0" y="0" width="1360" height="768" />
+    <state width="1323" height="191" key="GridCell.Tab.0.right" timestamp="1604876399328">
+      <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="389" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1602890803658" />
+    <state width="1323" height="191" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1604876399328" />
     <state width="1323" height="160" key="GridCell.Tab.0.right/0.0.1366.768@0.0.1366.768" timestamp="1603068248261" />
     <state width="1877" height="282" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1604790562382" />
     <state width="1317" height="182" key="GridCell.Tab.0.right/1360.0.1366.768/0.0.1360.768@0.0.1360.768" timestamp="1604792763586" />

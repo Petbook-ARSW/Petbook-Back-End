@@ -2,7 +2,7 @@ package edu.eci.arsw.petbook.model;
 
 import javax.persistence.*;
 import java.io.Serializable;
-import java.sql.Date;
+import java.sql.Timestamp;
 
 @Entity
 @Table(name = "post")
@@ -22,17 +22,17 @@ public class Post implements Serializable {
     private String description;
 
     @Column(name = "uploaddate")
-    private Date date;
+    private Timestamp date;
 
     public Post() {
 
     }
 
-    public Post(int iduser, byte [] picture, String description, java.util.Date date ) {
+    public Post(int iduser, byte [] picture, String description) {
         this.iduser = iduser;
         this.picture = picture;
         this.description = description;
-        this.date = new Date(date.getTime());
+        this.date = new Timestamp(System.currentTimeMillis());
     }
 
     public int getId() {
@@ -67,11 +67,11 @@ public class Post implements Serializable {
         this.description = description;
     }
 
-    public Date getDate() {
+    public Timestamp getDate() {
         return date;
     }
 
-    public void setDate(Date date) {
+    public void setDate(Timestamp date) {
         this.date = date;
     }
 }

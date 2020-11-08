@@ -8,5 +8,9 @@ public interface IPostPersistence {
 
     void addPost(Post post);
 
-    List<Post> getAllPosts();
+    List<Post> getAllPosts() throws PetbookPersistenceException;
+
+    void deletePost(int idPost)throws PetbookPersistenceException;
+
+    void updatePost(int idPost, Post post)throws PetbookPersistenceException;
 }

@@ -4,7 +4,6 @@ import edu.eci.arsw.petbook.model.Donation;
 import java.util.List;
 
 public interface IDonationServices {
-    
     void addDonation(Donation donation)throws PetbookServicesException;
     
     List<Donation> getAllDonations()throws PetbookServicesException;

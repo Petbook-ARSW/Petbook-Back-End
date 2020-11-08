@@ -7,11 +7,15 @@ import edu.eci.arsw.petbook.services.IDonationServices;
 import edu.eci.arsw.petbook.services.PetbookServicesException;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
+@Service
 public class DonationServices implements IDonationServices {
     @Autowired
     IDonationPersistence dp;
 
+    public DonationServices(){}
+    
     @Override
     public void addDonation(Donation donation) throws PetbookServicesException {
         try {

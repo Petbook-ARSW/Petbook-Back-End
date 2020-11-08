@@ -98,14 +98,6 @@ public class UserPersistenceImpl implements IUserPersistence {
     }
 
     @Override
-    public List<Post> getAllPost() throws PetbookPersistenceException {
-        if(pt.count()==0){
-            throw new PetbookPersistenceException("Post not found");
-        }
-        return pt.findAll();
-    }
-
-    @Override
     public void changeUser(User user) throws PetbookPersistenceException {
         User temp = ur.findOne(user.getId());
         if (user.getPasword()!=""){
@@ -124,18 +116,6 @@ public class UserPersistenceImpl implements IUserPersistence {
     }
 
     @Override
-    public void newPost(Post post) throws PetbookPersistenceException {
-        Post temp = new Post();
-        temp.setIduser(post.getIduser());
-        temp.setBirthdate(post.getBirthdate());
-        temp.setDescriptio(post.getDescriptio());
-        temp.setPhoto(post.getPhoto());
-        savePost(temp);
-    }
-
-
-
-    @Override
     public void saveUsuario(User usuario)throws PetbookPersistenceException {
         ur.save(usuario);
     }
@@ -143,11 +123,6 @@ public class UserPersistenceImpl implements IUserPersistence {
     @Override
     public void saveParticiapnt(Participant participant) throws PetbookPersistenceException {
         pr.save(participant);
-    }
-
-    @Override
-    public void savePost(Post post)  throws PetbookPersistenceException{
-        pt.save(post);
     }
 
     @Override

@@ -1,7 +1,6 @@
 package edu.eci.arsw.petbook.persistence;
 
 import edu.eci.arsw.petbook.model.Participant;
-import edu.eci.arsw.petbook.model.Post;
 import edu.eci.arsw.petbook.model.User;
 
 import java.util.List;
@@ -22,8 +21,6 @@ public interface IUserPersistence {
 
     void  saveParticiapnt(Participant participant) throws  PetbookPersistenceException;
 
-    void  savePost(Post post) throws  PetbookPersistenceException;
-
     void asistirEvento(int idevent,int iduser)throws PetbookPersistenceException;
 
     void deleteParticipById(int idevent, int iduser)throws PetbookPersistenceException;
@@ -32,8 +29,5 @@ public interface IUserPersistence {
 
     User getUserById(int idUser)throws PetbookPersistenceException;
 
-    void newPost(Post post)throws PetbookPersistenceException;
-
-    List<Post> getAllPost()throws PetbookPersistenceException;
 }
 

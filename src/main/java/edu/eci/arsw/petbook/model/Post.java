@@ -15,24 +15,24 @@ public class Post implements Serializable {
     @Column(name = "iduser")
     private int iduser;
 
-    @Column(name = "photo")
-    private String photo;
+    @Column(name = "picture")
+    private byte [] picture;
 
-    @Column(name = "birthdate")
-    private Date birthdate;
+    @Column(name = "description")
+    private String description;
 
-    @Column(name = "descriptio")
-    private String descriptio;
+    @Column(name = "uploaddate")
+    private Date date;
 
     public Post() {
 
     }
 
-    public Post(int iduser, String photo, Date birthdate, String descriptio) {
+    public Post(int iduser, byte [] picture, String description, java.util.Date date ) {
         this.iduser = iduser;
-        this.photo = photo;
-        this.birthdate = birthdate;
-        this.descriptio = descriptio;
+        this.picture = picture;
+        this.description = description;
+        this.date = new Date(date.getTime());
     }
 
     public int getId() {
@@ -51,27 +51,27 @@ public class Post implements Serializable {
         this.iduser = iduser;
     }
 
-    public String getPhoto() {
-        return photo;
+    public byte[] getPicture() {
+        return picture;
     }
 
-    public void setPhoto(String photo) {
-        this.photo = photo;
+    public void setPicture(byte[] picture) {
+        this.picture = picture;
     }
 
-    public Date getBirthdate() {
-        return birthdate;
+    public String getDescription() {
+        return description;
     }
 
-    public void setBirthdate(Date birthdate) {
-        this.birthdate = birthdate;
+    public void setDescription(String description) {
+        this.description = description;
     }
 
-    public String getDescriptio() {
-        return descriptio;
+    public Date getDate() {
+        return date;
     }
 
-    public void setDescriptio(String descriptio) {
-        this.descriptio = descriptio;
+    public void setDate(Date date) {
+        this.date = date;
     }
 }

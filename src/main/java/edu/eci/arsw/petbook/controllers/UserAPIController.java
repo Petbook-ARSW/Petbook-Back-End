@@ -1,6 +1,5 @@
 package edu.eci.arsw.petbook.controllers;
 
-import edu.eci.arsw.petbook.model.Post;
 import edu.eci.arsw.petbook.model.User;
 import edu.eci.arsw.petbook.services.IUserServices;
 import edu.eci.arsw.petbook.services.PetbookServicesException;
@@ -20,18 +19,6 @@ public class UserAPIController {
     public ResponseEntity<?> getResorces(){
         return new ResponseEntity<>(null,HttpStatus.ACCEPTED);
     }
-
-
-    @RequestMapping(path = "/post", method = RequestMethod.POST)
-    public ResponseEntity<?> newPost(@RequestBody Post post){
-        try {
-            us.newPost(post);
-            return new ResponseEntity<>(HttpStatus.CREATED);
-        } catch (PetbookServicesException ex) {
-            return new ResponseEntity<>(null, null);
-        }
-    }
-
 
     @RequestMapping(path = "/users/newUser", method = RequestMethod.POST)
     public ResponseEntity<?> postUsuario(@RequestBody User user){
@@ -87,15 +74,6 @@ public class UserAPIController {
     public ResponseEntity<?> getAllUsers(){
         try{
             return new ResponseEntity<>(us.getAllUsers(),HttpStatus.ACCEPTED);
-        }catch (PetbookServicesException ex){
-            return new ResponseEntity<>(null, HttpStatus.NOT_FOUND);
-        }
-    }
-
-    @RequestMapping(path = "/post", method = RequestMethod.GET)
-    public ResponseEntity<?> getAllPost(){
-        try{
-            return new ResponseEntity<>(us.getAllPost(),HttpStatus.ACCEPTED);
         }catch (PetbookServicesException ex){
             return new ResponseEntity<>(null, HttpStatus.NOT_FOUND);
         }

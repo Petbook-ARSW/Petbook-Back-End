@@ -24,3 +24,9 @@ alter table raffle add constraint fk_idgoal foreign key (idgoal) references goal
 create table if not exists pet (id serial primary key, idowner int not null, petname varchar(30) not null, birthdate date not null,information varchar(500));
 alter table pet add constraint fk_ownerid foreign key (idowner) references petbookuser(id)ON DELETE cascade;
 
+----DONACIONES----
+
+create table if not exists donation(id serial primary key, iduser int not null, idrefuge int not null, idevent int, donationdate date, donationhour time, valor int not null);
+alter table donation add constraint fk_userid foreign key (iduser) references petbookuser(id)ON DELETE cascade;
+alter table donation add constraint fk_refugeid foreign key (idrefuge) references petbookuser(id)ON DELETE cascade;
+alter table donation add constraint fk_eventid2 foreign key (idevent) references companyevent(id)ON DELETE cascade;

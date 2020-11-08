@@ -8,3 +8,4 @@ insert into companyevent (eventname, isDonaton, address, eventdate, eventhour, i
 insert into goal (eventid, prize, state, valor) values (2, 'Kit de aseo para gatos', false, 250000);
 insert into goal (eventid, prize, state, valor) values (2, 'Kit de aseo para perros', false, 545000);
 insert into pet (idowner,petname,birthdate,information) values (1,'Valentino','2020-10-10','El perrito mas lindo del mundo');
+insert into donation (iduser,idrefuge,idevent,donationdate,donationhour,valor) values (1,4,null,'2020-10-10','13:00',520000);

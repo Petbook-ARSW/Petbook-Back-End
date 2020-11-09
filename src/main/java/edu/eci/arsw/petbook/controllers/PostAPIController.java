@@ -55,4 +55,13 @@ public class PostAPIController {
         }
     }
 
+    @RequestMapping(path = "/posts/{postId}", method = RequestMethod.GET)
+    public ResponseEntity<?> getPostById(@PathVariable(name = "postId") int postId){
+        try {
+            return new ResponseEntity<>(ps.getPostById(postId), HttpStatus.CREATED);
+        } catch (PetbookServicesException ex) {
+            return new ResponseEntity<>(null, HttpStatus.BAD_REQUEST);
+        }
+    }
+
 }

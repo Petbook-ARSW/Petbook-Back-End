@@ -14,4 +14,6 @@ public interface IPostServices {
     void deletePost(int idPost) throws PetbookServicesException;
 
     void updatePost(int postId, Post post) throws PetbookServicesException;
+
+    Post getPostById(int postId)throws PetbookServicesException;
 }

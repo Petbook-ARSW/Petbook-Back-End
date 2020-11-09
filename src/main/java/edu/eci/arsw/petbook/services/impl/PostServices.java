@@ -60,4 +60,13 @@ public class PostServices implements IPostServices {
             throw new PetbookServicesException(e.getMessage());
         }
     }
+
+    @Override
+    public Post getPostById(int postId) throws PetbookServicesException {
+        try {
+            return pp.getPostById(postId);
+        } catch (PetbookPersistenceException e) {
+            throw new PetbookServicesException(e.getMessage());
+        }
+    }
 }

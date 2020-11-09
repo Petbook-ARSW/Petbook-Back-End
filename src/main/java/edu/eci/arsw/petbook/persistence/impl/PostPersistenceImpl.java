@@ -52,4 +52,13 @@ public class PostPersistenceImpl implements IPostPersistence {
         pr.save(newPost);
     }
 
+    @Override
+    public Post getPostById(int postId) throws PetbookPersistenceException {
+        try {
+            return pr.findOne(postId);
+        } catch (Exception ex) {
+            throw new PetbookPersistenceException("Failed to consult post");
+        }
+    }
+
 }

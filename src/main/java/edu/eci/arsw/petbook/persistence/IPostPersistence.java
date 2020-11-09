@@ -13,4 +13,6 @@ public interface IPostPersistence {
     void deletePost(int idPost)throws PetbookPersistenceException;
 
     void updatePost(int idPost, Post post)throws PetbookPersistenceException;
+
+    Post getPostById(int postId)throws PetbookPersistenceException;
 }

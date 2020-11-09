@@ -39,6 +39,7 @@ public class UserAPIController {
             return new ResponseEntity<>(null, null);
         }
     }
+
     @RequestMapping(path = "users/participInEnvent/{idevent}/{iduser}", method = RequestMethod.DELETE)
     public ResponseEntity<?> removeParticipant(@PathVariable(name = "idevent") int idevent, @PathVariable(name = "iduser") int iduser) {
         try {

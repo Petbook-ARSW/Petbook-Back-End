@@ -1,5 +1,6 @@
 package edu.eci.arsw.petbook.persistence;
 
+import edu.eci.arsw.petbook.model.Notification;
 import edu.eci.arsw.petbook.model.Participant;
 import edu.eci.arsw.petbook.model.User;
 
@@ -29,5 +30,8 @@ public interface IUserPersistence {
 
     User getUserById(int idUser)throws PetbookPersistenceException;
 
+    void addNotification(Notification notification)throws PetbookPersistenceException;
+
+    List<Notification> getNotificationsByUser(int idUser)throws PetbookPersistenceException;
 }
 

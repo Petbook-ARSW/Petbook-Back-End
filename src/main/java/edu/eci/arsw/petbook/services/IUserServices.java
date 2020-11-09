@@ -1,5 +1,6 @@
 package edu.eci.arsw.petbook.services;
 
+import edu.eci.arsw.petbook.model.Notification;
 import edu.eci.arsw.petbook.model.Participant;
 import edu.eci.arsw.petbook.model.User;
 
@@ -24,5 +25,9 @@ public interface IUserServices {
     List<Participant> getAllParticipants()throws PetbookServicesException;
 
     User getUserById(int idUser)throws PetbookServicesException;
+
+    void addNotification (Notification notification) throws PetbookServicesException;
+
+    List<Notification> getNotificationsByUser ( int idUser) throws PetbookServicesException;
 
 }

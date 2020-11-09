@@ -1,5 +1,6 @@
 package edu.eci.arsw.petbook.services.impl;
 
+import edu.eci.arsw.petbook.model.Notification;
 import edu.eci.arsw.petbook.model.Participant;
 import edu.eci.arsw.petbook.model.User;
 import edu.eci.arsw.petbook.persistence.IUserPersistence;
@@ -66,6 +67,24 @@ public class UserServices implements IUserServices {
     public User getUserById(int idUser) throws PetbookServicesException {
         try{
             return up.getUserById(idUser);
+        }catch (PetbookPersistenceException e){
+            throw new PetbookServicesException(e.getMessage());
+        }
+    }
+
+    @Override
+    public void addNotification(Notification notification) throws PetbookServicesException {
+        try{
+            up.addNotification(notification);
+        }catch (PetbookPersistenceException e){
+            throw new PetbookServicesException(e.getMessage());
+        }
+    }
+
+    @Override
+    public List<Notification> getNotificationsByUser(int idUser) throws PetbookServicesException {
+        try{
+            return up.getNotificationsByUser(idUser);
         }catch (PetbookPersistenceException e){
             throw new PetbookServicesException(e.getMessage());
         }

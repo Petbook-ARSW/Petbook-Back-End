@@ -1,16 +1,16 @@
 package edu.eci.arsw.petbook.persistence.impl;
 
+import edu.eci.arsw.petbook.model.Notification;
 import edu.eci.arsw.petbook.model.Participant;
-import edu.eci.arsw.petbook.model.Post;
 import edu.eci.arsw.petbook.model.User;
 import edu.eci.arsw.petbook.persistence.IUserPersistence;
 import edu.eci.arsw.petbook.persistence.PetbookPersistenceException;
+import edu.eci.arsw.petbook.persistence.repo.INotificationRepo;
 import edu.eci.arsw.petbook.persistence.repo.IParticipantRepo;
 import edu.eci.arsw.petbook.persistence.repo.IPostRepo;
 import edu.eci.arsw.petbook.persistence.repo.IUserRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
-
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.persistence.Query;
@@ -27,6 +27,9 @@ public class UserPersistenceImpl implements IUserPersistence {
 
     @Autowired
     IPostRepo pt;
+
+    @Autowired
+    INotificationRepo nr;
 
     @PersistenceContext
     EntityManager entityManager;
@@ -64,9 +67,7 @@ public class UserPersistenceImpl implements IUserPersistence {
             throw new PetbookPersistenceException("Failed to remove pet");
         }
     }
-
-
-
+    
     @Override
     public List<Participant> getAllParticipants() throws PetbookPersistenceException {
         if(pr.count() == 0){
@@ -83,7 +84,23 @@ public class UserPersistenceImpl implements IUserPersistence {
         }
         return user;
     }
-    
+
+    @Override
+    public void addNotification(Notification notification) throws PetbookPersistenceException {
+        nr.save(notification);
+    }
+
+    @Override
+    public List<Notification> getNotificationsByUser(int idUser) throws PetbookPersistenceException {
+        try {
+            Query query = entityManager.createNativeQuery("select * from notification where  iduser=?",Notification.class);
+            query.setParameter(1, idUser);
+            return query.getResultList();
+        }catch(Exception e){
+            throw new PetbookPersistenceException("Failed to remove pet");
+        }
+    }
+
     @Override
     public void setUser(User user) throws PetbookPersistenceException {
         //falta implementar

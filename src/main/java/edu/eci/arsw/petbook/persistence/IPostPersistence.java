@@ -19,6 +19,4 @@ public interface IPostPersistence {
     Post getPostById(int postId)throws PetbookPersistenceException;
 
     public List<Like> getAllLikes(int idpost)throws PetbookPersistenceException;
-
-    public User getUserByLike(int idUser, int idpost)throws PetbookPersistenceException;
 }

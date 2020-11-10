@@ -20,6 +20,4 @@ public interface IPostServices {
     Post getPostById(int postId)throws PetbookServicesException;
     
     List<Like> getAllLikes(int idpost)throws PetbookServicesException;
-    
-    User getUserByLike(int idUser, int idpost) throws PetbookServicesException;
 }

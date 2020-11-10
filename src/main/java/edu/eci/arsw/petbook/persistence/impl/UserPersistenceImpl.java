@@ -1,10 +1,12 @@
 package edu.eci.arsw.petbook.persistence.impl;
 
+import edu.eci.arsw.petbook.model.Like;
 import edu.eci.arsw.petbook.model.Notification;
 import edu.eci.arsw.petbook.model.Participant;
 import edu.eci.arsw.petbook.model.User;
 import edu.eci.arsw.petbook.persistence.IUserPersistence;
 import edu.eci.arsw.petbook.persistence.PetbookPersistenceException;
+import edu.eci.arsw.petbook.persistence.repo.ILikeRepo;
 import edu.eci.arsw.petbook.persistence.repo.INotificationRepo;
 import edu.eci.arsw.petbook.persistence.repo.IParticipantRepo;
 import edu.eci.arsw.petbook.persistence.repo.IPostRepo;
@@ -24,6 +26,9 @@ public class UserPersistenceImpl implements IUserPersistence {
 
     @Autowired
     IParticipantRepo pr;
+    
+    @Autowired
+    ILikeRepo lr;
 
     @Autowired
     IPostRepo pt;
@@ -141,6 +146,11 @@ public class UserPersistenceImpl implements IUserPersistence {
     public void saveParticiapnt(Participant participant) throws PetbookPersistenceException {
         pr.save(participant);
     }
+    
+    @Override
+    public void saveLike(Like like) throws PetbookPersistenceException {
+        lr.save(like);
+    }
 
     @Override
     public User getUserByNameUser(String userName) throws PetbookPersistenceException {
@@ -152,5 +162,24 @@ public class UserPersistenceImpl implements IUserPersistence {
         return (User) query.getSingleResult();
     }
 
+    @Override
+    public void darLike(int idpost, int iduser) throws PetbookPersistenceException {
+        Query query = entityManager.createNativeQuery("insert into likes (iduser,idevent) values (?,?)",Like.class);
+        query.setParameter(1, iduser).setParameter(2, idpost);
+        Like temp = new Like();
+        temp.setIdpost(idpost);
+        temp.setIduser(iduser);
+        saveLike(temp);
+    }
 
+    @Override
+    public void removeLikeById(int idpost, int iduser) throws PetbookPersistenceException {
+        try {
+            Query query = entityManager.createNativeQuery("select * from participants where  idpost=? and iduser=?",Like.class);
+            query.setParameter(1, idpost).setParameter(2, iduser);
+            lr.delete((Like) query.getSingleResult());
+        }catch(Exception e){
+            throw new PetbookPersistenceException("Failed to remove like");
+        }
+    }
 }

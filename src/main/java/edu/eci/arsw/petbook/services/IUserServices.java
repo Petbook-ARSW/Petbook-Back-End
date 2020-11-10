@@ -29,5 +29,9 @@ public interface IUserServices {
     void addNotification (Notification notification) throws PetbookServicesException;
 
     List<Notification> getNotificationsByUser ( int idUser) throws PetbookServicesException;
+    
+    void darLike(int idpost,int iduser)throws PetbookServicesException;
+
+    void removeLikeById(int idpost, int iduser)throws PetbookServicesException;
 
 }

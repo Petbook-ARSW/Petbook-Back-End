@@ -63,5 +63,13 @@ public class PostAPIController {
             return new ResponseEntity<>(null, HttpStatus.BAD_REQUEST);
         }
     }
-
+    
+    @RequestMapping(path = "/posts/{postid}/likes", method = RequestMethod.GET)
+    public ResponseEntity<?> getLikesXPostId(@PathVariable(name = "postid") int postid){
+        try{
+            return new ResponseEntity<>(ps.getAllLikes(postid),HttpStatus.ACCEPTED);
+        }catch (PetbookServicesException ex){
+            return new ResponseEntity<>(null, HttpStatus.NOT_FOUND);
+        }
+    }
 }

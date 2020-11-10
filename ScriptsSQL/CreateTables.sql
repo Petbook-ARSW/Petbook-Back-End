@@ -3,6 +3,10 @@ create table if not exists petbookuser (id serial primary key, username varchar(
 alter table petbookuser add constraint uk_userName unique(userName);
 alter table petbookuser add constraint uk_mail unique(mail);
 
+create table if not exists likes (id serial primary key, iduser int, idpost int);
+alter table likes add constraint fk_iduserlike foreign key (iduser) references petbookuser(id)ON DELETE cascade;
+alter table likes add constraint fk_idpostlike foreign key (idevent) references post(id)ON DELETE cascade;
+
 --EVENTO--
 create table if not exists companyevent (id serial primary key, eventname varchar(30) not null, isDonaton boolean not null, address varchar(30) not null, eventdate date, eventhour time, information varchar(500), hostcompany int);
 alter table companyevent add constraint ck_eventdate check (eventdate > current_date);

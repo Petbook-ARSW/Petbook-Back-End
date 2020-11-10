@@ -107,4 +107,24 @@ public class UserAPIController {
             return new ResponseEntity<>(null, null);
         }
     }
+    
+    @RequestMapping(path = "/users/LikeToPost/{idpost}/{iduser}", method = RequestMethod.POST)
+    public ResponseEntity<?> postLike(@PathVariable(name = "idpost") int idpost,@PathVariable(name = "iduser") int iduser){
+        try {
+            us.darLike(idpost,iduser);
+            return new ResponseEntity<>(HttpStatus.CREATED);
+        } catch (PetbookServicesException ex) {
+            return new ResponseEntity<>(null, null);
+        }
+    }
+    
+    @RequestMapping(path = "users/DislikeToPost/{idpost}/{iduser}", method = RequestMethod.DELETE)
+    public ResponseEntity<?> removeLike(@PathVariable(name = "idpost") int idpost, @PathVariable(name = "iduser") int iduser) {
+        try {
+            us.removeLikeById(idpost, iduser);
+            return new ResponseEntity<>(HttpStatus.ACCEPTED);
+        } catch (PetbookServicesException ex) {
+            return new ResponseEntity<>(null, HttpStatus.NOT_FOUND);
+        }
+    }
 }

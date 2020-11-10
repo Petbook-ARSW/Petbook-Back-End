@@ -126,5 +126,21 @@ public class UserServices implements IUserServices {
         }
     }
 
+    @Override
+    public void darLike(int idpost, int iduser) throws PetbookServicesException {
+        try {
+            up.darLike(idpost,iduser);
+        } catch (PetbookPersistenceException e) {
+            throw new PetbookServicesException(e.getMessage());
+        }
+    }
 
+    @Override
+    public void removeLikeById(int idpost, int iduser) throws PetbookServicesException {
+        try {
+            up.removeLikeById(idpost, iduser);
+        } catch (PetbookPersistenceException e) {
+            throw new PetbookServicesException(e.getMessage());
+        }
+    }
 }

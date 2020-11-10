@@ -1,5 +1,6 @@
 package edu.eci.arsw.petbook.persistence;
 
+import edu.eci.arsw.petbook.model.Like;
 import edu.eci.arsw.petbook.model.Notification;
 import edu.eci.arsw.petbook.model.Participant;
 import edu.eci.arsw.petbook.model.User;
@@ -33,5 +34,11 @@ public interface IUserPersistence {
     void addNotification(Notification notification)throws PetbookPersistenceException;
 
     List<Notification> getNotificationsByUser(int idUser)throws PetbookPersistenceException;
+
+    public void darLike(int idpost, int iduser)throws PetbookPersistenceException;
+    
+    void  saveLike(Like like) throws  PetbookPersistenceException;
+    
+    void removeLikeById(int idpost, int iduser)throws PetbookPersistenceException;
 }
 

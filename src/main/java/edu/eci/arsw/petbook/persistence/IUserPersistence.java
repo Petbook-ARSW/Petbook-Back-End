@@ -1,9 +1,6 @@
 package edu.eci.arsw.petbook.persistence;
 
-import edu.eci.arsw.petbook.model.Like;
-import edu.eci.arsw.petbook.model.Notification;
-import edu.eci.arsw.petbook.model.Participant;
-import edu.eci.arsw.petbook.model.User;
+import edu.eci.arsw.petbook.model.*;
 
 import java.util.List;
 
@@ -40,5 +37,7 @@ public interface IUserPersistence {
     void  saveLike(Like like) throws  PetbookPersistenceException;
     
     void removeLikeById(int idpost, int iduser)throws PetbookPersistenceException;
+
+    void addComment(Coment comment)throws PetbookPersistenceException;
 }
 

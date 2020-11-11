@@ -1,5 +1,6 @@
 package edu.eci.arsw.petbook.controllers;
 
+import edu.eci.arsw.petbook.model.Coment;
 import edu.eci.arsw.petbook.model.User;
 import edu.eci.arsw.petbook.services.IUserServices;
 import edu.eci.arsw.petbook.services.PetbookServicesException;
@@ -127,4 +128,18 @@ public class UserAPIController {
             return new ResponseEntity<>(null, HttpStatus.NOT_FOUND);
         }
     }
+
+
+    @RequestMapping(path = "/users/addComment", method = RequestMethod.POST)
+    public ResponseEntity<?> comment(@RequestBody Coment comment){
+        try {
+            us.addComment(comment);
+            return new ResponseEntity<>(HttpStatus.CREATED);
+        } catch (PetbookServicesException ex) {
+            return new ResponseEntity<>(null, null);
+        }
+    }
+
+
+
 }

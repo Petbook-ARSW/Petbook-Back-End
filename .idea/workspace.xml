@@ -23,22 +23,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="dd44b8ea-536f-4563-95f5-ab0e649cb417" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/edu/eci/arsw/petbook/controllers/NotificationsController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/edu/eci/arsw/petbook/model/Notification.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/edu/eci/arsw/petbook/persistence/repo/INotificationRepo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/edu/eci/arsw/petbook/model/Coment.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/edu/eci/arsw/petbook/persistence/repo/IComentRepo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/eci/arsw/petbook/WebSocketConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/eci/arsw/petbook/WebSocketConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/eci/arsw/petbook/controllers/PostAPIController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/eci/arsw/petbook/controllers/PostAPIController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/edu/eci/arsw/petbook/controllers/UserAPIController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/eci/arsw/petbook/controllers/UserAPIController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/eci/arsw/petbook/persistence/IPostPersistence.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/eci/arsw/petbook/persistence/IPostPersistence.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/edu/eci/arsw/petbook/persistence/IUserPersistence.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/eci/arsw/petbook/persistence/IUserPersistence.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/eci/arsw/petbook/persistence/impl/PostPersistenceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/eci/arsw/petbook/persistence/impl/PostPersistenceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/edu/eci/arsw/petbook/persistence/impl/UserPersistenceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/eci/arsw/petbook/persistence/impl/UserPersistenceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/eci/arsw/petbook/services/IPostServices.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/eci/arsw/petbook/services/IPostServices.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/edu/eci/arsw/petbook/services/IUserServices.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/eci/arsw/petbook/services/IUserServices.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/eci/arsw/petbook/services/impl/PostServices.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/eci/arsw/petbook/services/impl/PostServices.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/edu/eci/arsw/petbook/services/impl/UserServices.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/eci/arsw/petbook/services/impl/UserServices.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/eci/arsw/petbook/WebSocketConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/eci/arsw/petbook/WebSocketConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/eci/arsw/petbook/controllers/UserAPIController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/eci/arsw/petbook/controllers/UserAPIController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/eci/arsw/petbook/persistence/IUserPersistence.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/eci/arsw/petbook/persistence/IUserPersistence.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/eci/arsw/petbook/persistence/impl/UserPersistenceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/eci/arsw/petbook/persistence/impl/UserPersistenceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/eci/arsw/petbook/services/IUserServices.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/eci/arsw/petbook/services/IUserServices.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/eci/arsw/petbook/services/impl/UserServices.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/eci/arsw/petbook/services/impl/UserServices.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,8 +50,8 @@
       <list>
         <option value="JUnit5 Test Class" />
         <option value="JUnit3 Test Class" />
-        <option value="Interface" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -64,7 +61,7 @@
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
-        <option name="mavenHome" value="C:\Program Files\JetBrains\IntelliJ IDEA 2020.2.3\plugins\maven\lib\maven3" />
+        <option name="mavenHome" value="E:\JetBrains\IntelliJ IDEA Community Edition 2020.1\plugins\maven\lib\maven3" />
       </MavenGeneralSettings>
     </option>
   </component>
@@ -293,12 +290,12 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="92" y="92" width="1182" height="544" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog/0.0.1366.728@0.0.1366.728" timestamp="1602886743535" />
-    <state x="487" y="85" key="#com.intellij.ide.util.MemberChooser" timestamp="1604907839567">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state x="685" y="122" key="#com.intellij.ide.util.MemberChooser" timestamp="1605059644711">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="487" y="85" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728@0.0.1366.728" timestamp="1604907839567" />
     <state x="487" y="90" key="#com.intellij.ide.util.MemberChooser/0.0.1366.768@0.0.1366.768" timestamp="1603060885776" />
-    <state x="685" y="122" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1604789654189" />
+    <state x="685" y="122" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1605059644711" />
     <state x="485" y="90" key="#com.intellij.ide.util.MemberChooser/1360.0.1366.768/0.0.1360.768@0.0.1360.768" timestamp="1602817418015" />
     <state x="413" y="139" key="#com.intellij.ide.util.PackageChooserDialog" timestamp="1602877907509">
       <screen x="0" y="0" width="1366" height="728" />
@@ -373,5 +370,16 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="616" y="240" width="672" height="677" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1604790375629" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/edu/eci/arsw/petbook/persistence/impl/UserPersistenceImpl.java</url>
+          <line>125</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

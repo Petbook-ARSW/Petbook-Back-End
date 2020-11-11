@@ -55,6 +55,7 @@ public class PostAPIController {
         }
     }
 
+
     @RequestMapping(path = "/posts/{postId}", method = RequestMethod.GET)
     public ResponseEntity<?> getPostById(@PathVariable(name = "postId") int postId){
         try {
@@ -72,4 +73,14 @@ public class PostAPIController {
             return new ResponseEntity<>(null, HttpStatus.NOT_FOUND);
         }
     }
+
+    @RequestMapping(path = "/post/comments/{postid}", method = RequestMethod.GET)
+    public ResponseEntity<?> getCommentsById(@PathVariable(name = "postid") int postid) {
+        try {
+            return new ResponseEntity<>(ps.getCommentsByIdPost(postid), HttpStatus.ACCEPTED);
+        } catch (PetbookServicesException ex) {
+            return new ResponseEntity<>(null, HttpStatus.NOT_FOUND);
+        }
+    }
+
 }

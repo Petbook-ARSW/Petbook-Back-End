@@ -1,8 +1,8 @@
 package edu.eci.arsw.petbook.services;
 
+import edu.eci.arsw.petbook.model.Coment;
 import edu.eci.arsw.petbook.model.Like;
 import edu.eci.arsw.petbook.model.Post;
-import edu.eci.arsw.petbook.model.User;
 import org.springframework.web.multipart.MultipartFile;
 
 import java.util.List;
@@ -20,4 +20,6 @@ public interface IPostServices {
     Post getPostById(int postId)throws PetbookServicesException;
     
     List<Like> getAllLikes(int idpost)throws PetbookServicesException;
+
+    List<Coment>getCommentsByIdPost(int idpost)throws PetbookServicesException;
 }

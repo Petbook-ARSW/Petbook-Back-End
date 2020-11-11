@@ -1,8 +1,8 @@
 package edu.eci.arsw.petbook.services.impl;
 
+import edu.eci.arsw.petbook.model.Coment;
 import edu.eci.arsw.petbook.model.Like;
 import edu.eci.arsw.petbook.model.Post;
-import edu.eci.arsw.petbook.model.User;
 import edu.eci.arsw.petbook.persistence.IPostPersistence;
 import edu.eci.arsw.petbook.persistence.PetbookPersistenceException;
 import edu.eci.arsw.petbook.services.IPostServices;
@@ -77,6 +77,14 @@ public class PostServices implements IPostServices {
         try {
             return pp.getAllLikes(idpost);
         } catch (PetbookPersistenceException e) {
+            throw new PetbookServicesException(e.getMessage());
+        }
+    }
+    @Override
+    public List<Coment> getCommentsByIdPost(int idpost) throws PetbookServicesException {
+        try{
+            return pp.getCommentsByIdPost(idpost);
+        }catch (PetbookPersistenceException e){
             throw new PetbookServicesException(e.getMessage());
         }
     }

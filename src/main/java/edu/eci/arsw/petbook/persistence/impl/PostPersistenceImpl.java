@@ -1,8 +1,8 @@
 package edu.eci.arsw.petbook.persistence.impl;
 
+import edu.eci.arsw.petbook.model.Coment;
 import edu.eci.arsw.petbook.model.Like;
 import edu.eci.arsw.petbook.model.Post;
-import edu.eci.arsw.petbook.model.User;
 import edu.eci.arsw.petbook.persistence.IPostPersistence;
 import edu.eci.arsw.petbook.persistence.PetbookPersistenceException;
 import edu.eci.arsw.petbook.persistence.repo.IPostRepo;
@@ -71,6 +71,16 @@ public class PostPersistenceImpl implements IPostPersistence {
             throw new PetbookPersistenceException("Likes not found");
         }
         return query.getResultList();
+    }
+
+    @Override
+    public List<Coment> getCommentsByIdPost(int idpost) throws PetbookPersistenceException {
+        Query query = entityManager.createNativeQuery("select * from coment where idpost=?",Coment.class);
+        query.setParameter(1, idpost);
+        if (query.getResultList().size() == 0) {
+            throw new PetbookPersistenceException("Post not found");
+        }
+        return (List<Coment>) query.getResultList();
     }
 
 }

@@ -1,8 +1,6 @@
 package edu.eci.arsw.petbook.services;
 
-import edu.eci.arsw.petbook.model.Notification;
-import edu.eci.arsw.petbook.model.Participant;
-import edu.eci.arsw.petbook.model.User;
+import edu.eci.arsw.petbook.model.*;
 
 import java.util.List;
 
@@ -33,5 +31,7 @@ public interface IUserServices {
     void darLike(int idpost,int iduser)throws PetbookServicesException;
 
     void removeLikeById(int idpost, int iduser)throws PetbookServicesException;
+
+    void addComment(Coment comment)throws  PetbookServicesException;
 
 }

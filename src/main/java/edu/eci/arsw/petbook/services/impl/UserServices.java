@@ -1,5 +1,6 @@
 package edu.eci.arsw.petbook.services.impl;
 
+import edu.eci.arsw.petbook.model.Coment;
 import edu.eci.arsw.petbook.model.Notification;
 import edu.eci.arsw.petbook.model.Participant;
 import edu.eci.arsw.petbook.model.User;
@@ -140,6 +141,15 @@ public class UserServices implements IUserServices {
         try {
             up.removeLikeById(idpost, iduser);
         } catch (PetbookPersistenceException e) {
+            throw new PetbookServicesException(e.getMessage());
+        }
+    }
+
+    @Override
+    public void addComment(Coment comment) throws PetbookServicesException {
+        try{
+            up.addComment(comment);
+        }catch (PetbookPersistenceException e){
             throw new PetbookServicesException(e.getMessage());
         }
     }

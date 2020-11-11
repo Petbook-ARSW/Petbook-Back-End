@@ -172,7 +172,7 @@ public class UserPersistenceImpl implements IUserPersistence {
     @Override
     public void removeLikeById(int idpost, int iduser) throws PetbookPersistenceException {
         try {
-            Query query = entityManager.createNativeQuery("select * from participants where  idpost=? and iduser=?",Like.class);
+            Query query = entityManager.createNativeQuery("select * from likes where  idpost=? and iduser=?",Like.class);
             query.setParameter(1, idpost).setParameter(2, iduser);
             lr.delete((Like) query.getSingleResult());
         }catch(Exception e){

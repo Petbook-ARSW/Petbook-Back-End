@@ -76,7 +76,7 @@ public class PetPersistenceImpl implements IPetPersistence {
 
     @Override
     public void editPet(int id, Pet pet) throws PetbookPersistenceException {
-        Pet temp = ptr.getOne(pet.getId());
+        Pet temp = ptr.findById(id).get();
         if (!pet.getInformation().equals("")){
             temp.setInformation(pet.getInformation());
         }

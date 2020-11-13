@@ -80,7 +80,7 @@ public class UserPersistenceImpl implements IUserPersistence {
 
     @Override
     public User getUserById(int idUser) throws PetbookPersistenceException {
-        User user = ur.getOne(idUser);
+        User user = ur.findById(idUser).get();
         if (user.equals(null)){
             throw new PetbookPersistenceException("User not found");
         }
@@ -113,7 +113,7 @@ public class UserPersistenceImpl implements IUserPersistence {
 
     @Override
     public void changeUser(User user) throws PetbookPersistenceException {
-        User temp = ur.getOne(user.getId());
+        User temp = ur.findById(user.getId()).get();
         if (user.getPasword()!=""){
             temp.setPasword(user.getPasword());
         }

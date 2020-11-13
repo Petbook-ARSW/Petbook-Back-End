@@ -55,7 +55,6 @@ public class User implements Serializable {
         this.numberPhone = numberPhone;
         this.information = information;
         this.birthdate = birthdate;
-        //System.out.println("entrooooooooooooooo");
     }
 
     public int getId() {

@@ -124,7 +124,7 @@ public class EventPersistenceImpl implements IEventPersistence {
     @Override
     public void updateEvent(Event evento) throws PetbookPersistenceException {
         try{
-            Event temp = er.getOne(evento.getId());
+            Event temp = er.findById(evento.getId()).get();
             if (!evento.getDate().equals("")){
                 temp.setDate(evento.getDate());
             }
@@ -200,7 +200,7 @@ public class EventPersistenceImpl implements IEventPersistence {
     @Override
     public void updateGoal(Goal goal) throws PetbookPersistenceException {
         try{
-            Goal temp = gr.getOne(goal.getId());
+            Goal temp = gr.findById(goal.getId()).get();
             if (goal.getValor()>0){
                 temp.setValor(goal.getValor());
             }

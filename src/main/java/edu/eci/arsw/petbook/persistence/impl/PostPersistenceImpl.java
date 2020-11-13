@@ -49,7 +49,7 @@ public class PostPersistenceImpl implements IPostPersistence {
 
     @Override
     public void updatePost(int idPost, Post post) throws PetbookPersistenceException {
-        Post newPost = pr.getOne(idPost);
+        Post newPost = pr.findById(idPost).get();
         newPost.setDescription(post.getDescription());
         pr.save(newPost);
     }
@@ -57,7 +57,7 @@ public class PostPersistenceImpl implements IPostPersistence {
     @Override
     public Post getPostById(int postId) throws PetbookPersistenceException {
         try {
-            return pr.getOne(postId);
+            return pr.findById(postId).get();
         } catch (Exception ex) {
             throw new PetbookPersistenceException("Failed to consult post");
         }

@@ -8,8 +8,6 @@ public interface IUserPersistence {
 
     void addUser(User user) throws PetbookPersistenceException;
 
-    void setUser(User user)throws PetbookPersistenceException;
-
     List<User> getAllUsers()throws PetbookPersistenceException;
 
     User getUserByNameUser(String nameUser)throws PetbookPersistenceException;
@@ -32,7 +30,7 @@ public interface IUserPersistence {
 
     List<Notification> getNotificationsByUser(int idUser)throws PetbookPersistenceException;
 
-    public void darLike(int idpost, int iduser)throws PetbookPersistenceException;
+    void darLike(int idpost, int iduser)throws PetbookPersistenceException;
     
     void  saveLike(Like like) throws  PetbookPersistenceException;
     

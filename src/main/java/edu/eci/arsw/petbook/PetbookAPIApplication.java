@@ -10,7 +10,6 @@ import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
 
 @SpringBootApplication
-@ComponentScan(basePackages = {"edu.eci.arsw.petbook"})
 @EnableJpaRepositories("edu.eci.arsw.petbook.persistence")
 @EntityScan("edu.eci.arsw.petbook.model")
 public class PetbookAPIApplication {

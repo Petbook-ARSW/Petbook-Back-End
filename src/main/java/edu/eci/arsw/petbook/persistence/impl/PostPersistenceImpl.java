@@ -41,7 +41,7 @@ public class PostPersistenceImpl implements IPostPersistence {
     @Override
     public void deletePost(int idPost) throws PetbookPersistenceException {
         try {
-            pr.delete(idPost);
+            pr.deleteById(idPost);
         } catch (Exception ex) {
             throw new PetbookPersistenceException("Failed to delete post");
         }
@@ -49,7 +49,7 @@ public class PostPersistenceImpl implements IPostPersistence {
 
     @Override
     public void updatePost(int idPost, Post post) throws PetbookPersistenceException {
-        Post newPost = pr.findOne(idPost);
+        Post newPost = pr.getOne(idPost);
         newPost.setDescription(post.getDescription());
         pr.save(newPost);
     }
@@ -57,7 +57,7 @@ public class PostPersistenceImpl implements IPostPersistence {
     @Override
     public Post getPostById(int postId) throws PetbookPersistenceException {
         try {
-            return pr.findOne(postId);
+            return pr.getOne(postId);
         } catch (Exception ex) {
             throw new PetbookPersistenceException("Failed to consult post");
         }

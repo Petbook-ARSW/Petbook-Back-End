@@ -115,7 +115,7 @@ public class EventPersistenceImpl implements IEventPersistence {
     @Override
     public void removeEventXId(int id) throws PetbookPersistenceException {
         try {
-            er.delete(id);
+            er.deleteById(id);
         }catch(Exception e){
             throw new PetbookPersistenceException("Failed to remove event");
         }
@@ -124,7 +124,7 @@ public class EventPersistenceImpl implements IEventPersistence {
     @Override
     public void updateEvent(Event evento) throws PetbookPersistenceException {
         try{
-            Event temp = er.findOne(evento.getId());
+            Event temp = er.getOne(evento.getId());
             if (!evento.getDate().equals("")){
                 temp.setDate(evento.getDate());
             }
@@ -191,7 +191,7 @@ public class EventPersistenceImpl implements IEventPersistence {
     @Override
     public void removeGoalXId(int id) throws PetbookPersistenceException {
         try {
-            gr.delete(id);
+            gr.deleteById(id);
         }catch(Exception e){
             throw new PetbookPersistenceException("Failed to remove goal");
         }
@@ -200,7 +200,7 @@ public class EventPersistenceImpl implements IEventPersistence {
     @Override
     public void updateGoal(Goal goal) throws PetbookPersistenceException {
         try{
-            Goal temp = gr.findOne(goal.getId());
+            Goal temp = gr.getOne(goal.getId());
             if (goal.getValor()>0){
                 temp.setValor(goal.getValor());
             }

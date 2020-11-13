@@ -67,7 +67,7 @@ public class PetPersistenceImpl implements IPetPersistence {
     @Override
     public void removePetId(int id) throws PetbookPersistenceException {
         try {
-            ptr.delete(id);
+            ptr.deleteById(id);
         }catch(Exception e){
             throw new PetbookPersistenceException("Failed to remove pet");
         }
@@ -76,7 +76,7 @@ public class PetPersistenceImpl implements IPetPersistence {
 
     @Override
     public void editPet(int id, Pet pet) throws PetbookPersistenceException {
-        Pet temp = ptr.findOne(pet.getId());
+        Pet temp = ptr.getOne(pet.getId());
         if (!pet.getInformation().equals("")){
             temp.setInformation(pet.getInformation());
         }

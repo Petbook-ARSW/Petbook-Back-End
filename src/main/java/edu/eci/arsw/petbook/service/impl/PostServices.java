@@ -5,6 +5,7 @@ import edu.eci.arsw.petbook.model.Like;
 import edu.eci.arsw.petbook.model.Post;
 import edu.eci.arsw.petbook.persistence.IPostPersistence;
 import edu.eci.arsw.petbook.persistence.PetbookPersistenceException;
+import edu.eci.arsw.petbook.persistence.cache.IPetbookCache;
 import edu.eci.arsw.petbook.service.IPostServices;
 import edu.eci.arsw.petbook.service.PetbookServicesException;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,6 +22,9 @@ public class PostServices implements IPostServices {
 
     @Autowired
     IPostPersistence pp;
+
+    @Autowired
+    IPetbookCache pc;
 
     @PersistenceContext
     EntityManager entityManager;
@@ -41,7 +45,7 @@ public class PostServices implements IPostServices {
         try {
             return pp.getAllPosts();
         } catch (PetbookPersistenceException e) {
-            throw new PetbookServicesException(e.getMessage());
+           throw new PetbookServicesException(e.getMessage());
         }
     }
 

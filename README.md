@@ -106,4 +106,5 @@ Peetbook es una aplicación web, un tipo de red social dirigida a veterinarias, 
  - Response: Las contraseñas deben estar cifradas.
  - Response Measure: Las contraseñas del usuario deben aparecer en un lenguaje indistinguible para el usuario en la base de datos y en usuario.html.
  
- https://pruebacorreoescuelaingeduco-my.sharepoint.com/:v:/g/personal/juan_herrera-m_mail_escuelaing_edu_co/EX140mH76L9KgqmnzI3lO1wBPgUpLCqaA6J0shr_IrBodQ?e=tFrUxS
+ - Vista 
+   https://cutt.ly/2hicKHh

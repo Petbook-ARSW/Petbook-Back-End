@@ -96,14 +96,14 @@ Peetbook es una aplicación web, un tipo de red social dirigida a veterinarias, 
 
    [Petbook - Manual de usuario](https://angi-jimenez.gitbook.io/petbook-user-manual/)
    
-### Seguridad:
-## Escenario 1: Cifrar contraseñas.
+## Seguridad:
+### Escenario 1: Cifrar contraseñas.
 
- Source: Usuario final.
- Stimulus: Crear un usuario en la aplicación.
- Artifact: Frontend, Backend, Base de datos.
- Enviroment: Aplicación bajo condiciones normales.
- Response: Las contraseñas deben estar cifradas.
- Response Measure: Las contraseñas del usuario deben aparecer en un lenguaje indistinguible para el usuario en la base de datos y en usuario.html.
+ - Source: Usuario final.
+ - Stimulus: Crear un usuario en la aplicación.
+ - Artifact: Frontend, Backend, Base de datos.
+ - Enviroment: Aplicación bajo condiciones normales.
+ - Response: Las contraseñas deben estar cifradas.
+ - Response Measure: Las contraseñas del usuario deben aparecer en un lenguaje indistinguible para el usuario en la base de datos y en usuario.html.
  
  

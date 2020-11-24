@@ -96,6 +96,20 @@ Peetbook es una aplicación web, un tipo de red social dirigida a veterinarias, 
 
    [Petbook - Manual de usuario](https://angi-jimenez.gitbook.io/petbook-user-manual/)
    
+# Requerimientos no funcionales
+
+## Usabilidad:
+### Escenario 1: Realizar un post.
+
+  - Source: Usuario final.
+  - Stimulus: Realizar un post en la aplicación.
+  - Artifact: Frontend, Backend, Base de datos.
+  - Enviroment: Aplicación bajo condiciones normales.
+  - Response: El post se realiza y se puede visualizar de manera exitosa.
+  - Response Measure: El usuario es capáz de realizar un post utilizando solo 2 clicks en la pagina principal.
+  - Vista 
+   https://drive.google.com/file/d/1fUx_gYcoZcHztRt7d1J-D3RcadF2B4ZP/view
+
 ## Seguridad:
 ### Escenario 1: Cifrar contraseñas.
 
@@ -105,6 +119,5 @@ Peetbook es una aplicación web, un tipo de red social dirigida a veterinarias, 
  - Enviroment: Aplicación bajo condiciones normales.
  - Response: Las contraseñas deben estar cifradas.
  - Response Measure: Las contraseñas del usuario deben aparecer en un lenguaje indistinguible para el usuario en la base de datos y en usuario.html.
- 
  - Vista 
    https://cutt.ly/2hicKHh

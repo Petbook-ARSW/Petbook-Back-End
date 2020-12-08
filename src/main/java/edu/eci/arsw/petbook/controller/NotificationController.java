@@ -1,6 +1,8 @@
 package edu.eci.arsw.petbook.controller;
 
+import edu.eci.arsw.petbook.model.Donation;
 import edu.eci.arsw.petbook.model.Notification;
+import edu.eci.arsw.petbook.service.IDonationServices;
 import edu.eci.arsw.petbook.service.IUserServices;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.messaging.handler.annotation.DestinationVariable;
@@ -14,12 +16,26 @@ public class NotificationController {
     @Autowired
     IUserServices us;
 
+    @Autowired
+    IDonationServices ds;
+
     @MessageMapping("/notification/{userId}")
     @SendTo("/topic/notification/{userId}")
     public Notification obtainNotification (@DestinationVariable int userId,  Notification notification){
         try {
             us.addNotification(notification);
             return notification;
+        } catch (Exception e) {
+            return null;
+        }
+    }
+
+    @MessageMapping("/donation/{eventId}")
+    @SendTo("/topic/donation/{eventId}")
+    public Donation donate  (@DestinationVariable int eventId, Donation donation){
+        try {
+            ds.addDonation(donation);
+            return donation;
         } catch (Exception e) {
             return null;
         }

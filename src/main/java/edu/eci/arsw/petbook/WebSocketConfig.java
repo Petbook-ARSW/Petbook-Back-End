@@ -12,7 +12,7 @@ public class WebSocketConfig implements WebSocketMessageBrokerConfigurer {
 
     @Override
     public void registerStompEndpoints(StompEndpointRegistry registry) {
-        registry.addEndpoint("/notificationSocket")
+        registry.addEndpoint("/notificationSocket" )
                 .setAllowedOrigins("http://localhost:3000", "https://petbookapp-74400.web.app/")
                 .withSockJS();
     }

@@ -13,4 +13,6 @@ public interface IDonationServices {
     List<Donation> getDonationsXRefuge(int idrefuge) throws PetbookServicesException;
     
     List<Donation> getDonationsXEvent(int idevent) throws PetbookServicesException;
+    
+    int getValuesDonationsXEvent(int idevent) throws PetbookServicesException;
 }

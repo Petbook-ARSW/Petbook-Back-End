@@ -64,4 +64,13 @@ public class DonationAPIController {
             return new ResponseEntity<>(null, HttpStatus.NOT_FOUND);
         }
     }
+
+    @RequestMapping(path = "event/donations/values/{idevent}", method = RequestMethod.GET)
+    public ResponseEntity<?> getValuesDonationsXEvent(@PathVariable(name = "idevent") int idevent) {
+        try {
+            return new ResponseEntity<>(ds.getValuesDonationsXEvent(idevent), HttpStatus.ACCEPTED);
+        } catch (PetbookServicesException ex) {
+            return new ResponseEntity<>(null, HttpStatus.NOT_FOUND);
+        }
+    }
 }

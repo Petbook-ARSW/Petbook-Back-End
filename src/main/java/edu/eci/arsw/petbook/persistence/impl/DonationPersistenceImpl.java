@@ -70,4 +70,15 @@ public class DonationPersistenceImpl implements IDonationPersistence{
         }
         return query.getResultList();
     }
+
+    @Override
+    public int getValuesDonationsXEvent(int idevent) throws PetbookPersistenceException {
+        Query query = entityManager.createNativeQuery("select * from donation where idevent=?",Donation.class);
+        query.setParameter(1, idevent);
+        if (query.getResultList().size() == 0) {
+            throw new PetbookPersistenceException("Donations not found");
+        }
+        List<Donation> donaciones = query.getResultList();
+        return 0;
+    }
 }

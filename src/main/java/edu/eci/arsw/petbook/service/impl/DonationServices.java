@@ -60,4 +60,18 @@ public class DonationServices implements IDonationServices {
             throw new PetbookServicesException(e.getMessage());
         }
     }
+
+    @Override
+    public int getValuesDonationsXEvent(int idevent) throws PetbookServicesException {
+        try{
+            List<Donation> donaciones = dp.getDonationsXEvent(idevent);
+            int valor=0;
+            for(Donation i: donaciones){
+                valor += i.getValor();
+            }
+            return valor;
+        }catch (PetbookPersistenceException e){
+            throw new PetbookServicesException(e.getMessage());
+        }
+    }
 }

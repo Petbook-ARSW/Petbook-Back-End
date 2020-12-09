@@ -24,9 +24,8 @@
   <component name="ChangeListManager">
     <list default="true" id="dd44b8ea-536f-4563-95f5-ab0e649cb417" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/eci/arsw/petbook/WebSocketConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/eci/arsw/petbook/WebSocketConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/eci/arsw/petbook/controller/NotificationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/eci/arsw/petbook/controller/NotificationController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/eci/arsw/petbook/controller/NotificationController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/eci/arsw/petbook/controller/NotificationController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/eci/arsw/petbook/persistence/IDonationPersistence.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/eci/arsw/petbook/persistence/IDonationPersistence.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/eci/arsw/petbook/persistence/impl/DonationPersistenceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/eci/arsw/petbook/persistence/impl/DonationPersistenceImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,7 +51,7 @@
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
-        <option name="mavenHome" value="C:\Program Files\JetBrains\IntelliJ IDEA 2020.2.3\plugins\maven\lib\maven3" />
+        <option name="mavenHome" value="C:\Program Files\JetBrains\IntelliJ IDEA 2020.2.2\bin\IntelliJ IDEA 2020.2.2\plugins\maven\lib\maven3" />
       </MavenGeneralSettings>
     </option>
   </component>
@@ -130,6 +129,17 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -263,6 +273,7 @@
       <workItem from="1607138255436" duration="49000" />
       <workItem from="1607456208659" duration="228000" />
       <workItem from="1607456524991" duration="6112000" />
+      <workItem from="1607475672401" duration="110000" />
     </task>
     <servers />
   </component>

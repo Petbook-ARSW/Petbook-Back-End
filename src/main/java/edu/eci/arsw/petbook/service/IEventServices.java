@@ -43,4 +43,6 @@ public interface IEventServices {
     void updateGoal(Goal goal) throws PetbookServicesException;
 
     List<Participant> getParticipantsXEvento(int idevent)throws PetbookServicesException;
+
+    int getAllValueGoals(int eventid) throws PetbookServicesException;
 }

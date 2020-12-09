@@ -231,4 +231,14 @@ public class EventPersistenceImpl implements IEventPersistence {
         return query.getResultList();
     }
 
+    @Override
+    public List<Goal> getAllValueGoals(int eventid) throws PetbookPersistenceException {
+        Query query = entityManager.createNativeQuery("select * from goal where eventid=?",Goal.class);
+        query.setParameter(1, eventid);
+        if(query.getResultList().size() == 0){
+            throw new PetbookPersistenceException("Goals not found");
+        }
+        return query.getResultList();
+    }
+
 }

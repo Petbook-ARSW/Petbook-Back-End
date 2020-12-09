@@ -13,6 +13,7 @@ import org.springframework.stereotype.Service;
 
 import java.sql.Date;
 import java.util.List;
+import java.util.Collections;
 
 @Service
 public class EventServices implements IEventServices {
@@ -174,6 +175,21 @@ public class EventServices implements IEventServices {
             throw new PetbookServicesException(e.getMessage());
         }
     }
-
-
+    
+    @Override
+    public int getAllValueGoals(int eventid) throws PetbookServicesException {
+        try {
+            List<Goal> metas = ep.getAllGoals(eventid);
+            
+            int valor = 0;
+            for (Goal i: metas){
+                if(valor < i.getValor()){
+                    valor = i.getValor();
+                }
+            }
+            return valor;
+        } catch (PetbookPersistenceException e) {
+            throw new PetbookServicesException(e.getMessage());
+        }
+    }
 }

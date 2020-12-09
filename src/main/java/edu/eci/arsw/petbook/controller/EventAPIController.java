@@ -179,4 +179,13 @@ public class EventAPIController {
             return new ResponseEntity<>(null, HttpStatus.NOT_FOUND);
         }
     }
+
+    @RequestMapping(path = "/events/{eventId}/goals/value", method = RequestMethod.GET)
+    public ResponseEntity<?> getValueGoalsXEventId(@PathVariable(name = "eventId") int eventId){
+        try{
+            return new ResponseEntity<>(es.getAllValueGoals(eventId),HttpStatus.ACCEPTED);
+        }catch (PetbookServicesException ex){
+            return new ResponseEntity<>(null, HttpStatus.NOT_FOUND);
+        }
+    }
 }

@@ -47,4 +47,6 @@ public interface IEventPersistence {
     void saveGoal(Goal goal) throws PetbookPersistenceException;
 
     List<Participant> getParticipantsXEvento(int idevent)throws PetbookPersistenceException;
+
+    List<Goal> getAllValueGoals(int eventid)throws PetbookPersistenceException;
 }

@@ -95,7 +95,7 @@ public class UserPersistenceImpl implements IUserPersistence {
     @Override
     public List<Notification> getNotificationsByUser(int idUser) throws PetbookPersistenceException {
         try {
-            Query query = entityManager.createNativeQuery("select * from notification where  iduser=?",Notification.class);
+            Query query = entityManager.createNativeQuery("select * from notification where  iduser=? order by datehour desc",Notification.class);
             query.setParameter(1, idUser);
             return query.getResultList();
         }catch(Exception e){

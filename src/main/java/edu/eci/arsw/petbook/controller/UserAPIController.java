@@ -128,6 +128,13 @@ public class UserAPIController {
         }
     }
 
-
+    @RequestMapping(path = "/notifications/{idUser}", method = RequestMethod.GET)
+    public ResponseEntity<?> getNotificationsByUser(@PathVariable(name = "idUser") int idUser) {
+        try {
+            return new ResponseEntity<>(us.getNotificationsByUser(idUser), HttpStatus.ACCEPTED);
+        } catch (PetbookServicesException ex) {
+            return new ResponseEntity<>(null, HttpStatus.NOT_FOUND);
+        }
+    }
 
 }

@@ -11,6 +11,8 @@ import edu.eci.arsw.petbook.service.PetbookServicesException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.sql.Timestamp;
+import java.util.Date;
 import java.util.List;
 
 
@@ -76,6 +78,7 @@ public class UserServices implements IUserServices {
     @Override
     public void addNotification(Notification notification) throws PetbookServicesException {
         try{
+            notification.setDatehour(new Timestamp(new Date().getTime()));
             up.addNotification(notification);
         }catch (PetbookPersistenceException e){
             throw new PetbookServicesException(e.getMessage());

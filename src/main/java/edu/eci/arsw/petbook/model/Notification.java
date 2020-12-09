@@ -25,11 +25,11 @@ public class Notification implements Serializable {
     public Notification() {
     }
 
-    public Notification(int id, String description, int iduser, int datehour) {
+    public Notification(int id, String description, int iduser, Timestamp datehour) {
         this.id = id;
         this.description = description;
         this.iduser = iduser;
-        this.datehour = new Timestamp(new Date().getTime());
+        this.datehour = datehour;
     }
 
     public int getId() {
